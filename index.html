@@ -119,8 +119,6 @@
     function addToCart(price, inputId, productName) {
         const qtyInput = document.getElementById(inputId);
         const quantityToAdd = parseInt(qtyInput.value) || 1;
-
-        // Check if item is already in cart
         const existingItem = cart.find(item => item.name === productName);
 
         if (existingItem) {
@@ -128,9 +126,8 @@
         } else {
             cart.push({ name: productName, price: price, quantity: quantityToAdd });
         }
-
         updateCartUI();
-        qtyInput.value = 1; // Reset product input to 1
+        qtyInput.value = 1;
     }
 
     function changeQuantity(productName, delta) {
@@ -153,20 +150,16 @@
     function updateCartUI() {
         const cartItemsDiv = document.getElementById('cart-items');
         const totalDisplay = document.getElementById('total');
-        
         if (cart.length === 0) {
             cartItemsDiv.innerHTML = '<p style="color: #999; text-align: center;">Your cart is empty</p>';
             totalDisplay.innerText = "0";
             return;
         }
-
         cartItemsDiv.innerHTML = '';
         total = 0;
-
         cart.forEach(item => {
             const itemTotal = item.price * item.quantity;
             total += itemTotal;
-
             const div = document.createElement('div');
             div.className = 'cart-item';
             div.innerHTML = `
@@ -180,32 +173,31 @@
             `;
             cartItemsDiv.appendChild(div);
         });
-
         totalDisplay.innerText = total;
     }
 
+    // NEW CHECKOUT LOGIC USING INLINE MODE
     function sendToTelegram() {
         const tg = window.Telegram.WebApp;
         if (cart.length === 0) {
             alert("Please add items to your cart first!");
             return;
         }
-        
-        // Prepare the data to send back to your bot
-        const orderData = {
-            items: cart,
-            totalPrice: total
-        };
 
-        tg.sendData(JSON.stringify(orderData));
-        tg.close();
+        // Format the order into a readable message
+        const orderList = cart.map(i => `• ${i.name} x${i.quantity} ($${i.price * i.quantity})`).join('\n');
+        const finalMessage = `🛒 *NEW ORDER*\n\n${orderList}\n\n💰 *Total: $${total}*`;
+
+        // This closes the app and opens a chat picker to "post" the order
+        tg.switchInlineQuery(finalMessage);
     }
 
-    // Initialize Telegram WebApp
     window.onload = () => {
         window.Telegram.WebApp.ready();
     };
 </script>
 
+
 </body>
 </html>
+
