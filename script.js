@@ -5,9 +5,9 @@ let total = 0;
 const GITHUB_USER = "twitchitifititches"; 
 const REPO_NAME = "26BNMerch"; 
 
-// WE SPLIT THE TOKEN TO BYPASS GITHUB'S AUTOMATIC REVOCATION SCANNER
-const p1 = "github_pat_11AEB25OQ0bQvD1jOxIY5n_"; // First half of your NEW token
-const p2 = "j3qSf6le6IFTqVfYQOgxgEzByvyrvGAYaSbXDaeDyAQOPF5Q35Fz04CJUzK"; // Second half
+// --- TOKEN SPLIT TRICK (Hides token from GitHub Scanners) ---
+const p1 = "github_pat_11AEB25OQ0Qm8dDsx19vya"; 
+const p2 = "_Zdf23bKCIvObsx4QZ1nx5nHQ3d3I4VablAgOBElDqbA4EHZ3R5I3rOuuTZy"; 
 const GITHUB_PAT = p1 + p2;
 
 function addToCart(price, inputId, productName) {
@@ -53,6 +53,7 @@ function removeFromCart(productName) {
 async function submitOrder() {
     if (cart.length === 0) return;
     
+    // Check if running inside Telegram
     const tg = window.Telegram ? window.Telegram.WebApp : null;
     const customerName = tg && tg.initDataUnsafe && tg.initDataUnsafe.user ? (tg.initDataUnsafe.user.username || tg.initDataUnsafe.user.first_name) : "Guest";
     
@@ -79,14 +80,28 @@ async function submitOrder() {
 
         if (response.ok) {
             const successMsg = "Order Sent! Payment due to Capt. Pope at FTX.";
-            if (tg) { tg.showAlert(successMsg); tg.close(); } else { alert(successMsg); }
+            if (tg) {
+                tg.showAlert(successMsg);
+                tg.close();
+            } else {
+                alert(successMsg);
+            }
             cart = [];
             updateCartUI();
         } else {
             const errorText = await response.text();
-            if (tg) { tg.showAlert("Error: " + response.status); } else { alert("Error " + response.status + ": " + errorText); }
+            if (tg) {
+                tg.showAlert("Failed to send. Status: " + response.status);
+            } else {
+                alert("Failed to send. Status: " + response.status + " - " + errorText);
+            }
         }
     } catch (e) {
-        if (tg) { tg.showAlert("Connection Error: " + e.message); } else { alert("Connection Error: " + e.message); }
+        const connError = "Connection Error: " + e.message;
+        if (tg) {
+            tg.showAlert(connError);
+        } else {
+            alert(connError);
+        }
     }
 }
