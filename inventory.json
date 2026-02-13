@@ -1,8 +1,7 @@
 {
-  "inventory": [
-    { "id": "shirt_01", "name": "Epic Shirt", "price": 35, "stock": 50, "threshold": 5 },
-    { "id": "hoodie_01", "name": "Hoodie", "price": 50, "stock": 20, "threshold": 3 },
-    { "id": "cap_01", "name": "Ball Cap", "price": 25, "stock": 100, "threshold": 10 }
+  "items": [
+    { "id": "shirt", "name": "Epic Shirt", "price": 35, "stock": 50, "threshold": 5 },
+    { "id": "hoodie", "name": "Hoodie", "price": 50, "stock": 20, "threshold": 3 }
   ],
-  "orders_history": []
+  "orders": []
 }
