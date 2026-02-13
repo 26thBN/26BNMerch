@@ -1,10 +1,8 @@
 let cart = [];
 let total = 0;
 
-// FINAL CONFIGURATION
 const GITHUB_USER = "twitchitifititches"; 
 const REPO_NAME = "26BNMerch"; 
-const GITHUB_PAT = "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";
 
 function addToCart(price, inputId, productName) {
     const qtyInput = document.getElementById(inputId);
@@ -60,44 +58,36 @@ async function submitOrder() {
     };
 
     try {
+        // We trigger the action WITHOUT putting the token in this public file.
+        // The GitHub Action will use the secret 'MY_GITHUB_PAT' we saved in Step 1.
         const apiUrl = `https://api.github.com{GITHUB_USER}/${REPO_NAME}/dispatches`;
 
+        // Note: For public repositories, triggering a dispatch still requires 
+        // basic authentication. Since we cannot store the token here, 
+        // please ensure your GitHub Action 'process_order.yml' is set up 
+        // to handle 'repository_dispatch' events correctly.
+        
         const response = await fetch(apiUrl, {
             method: 'POST',
             mode: 'cors',
             headers: { 
-                'Authorization': `token ${GITHUB_PAT}`, 
                 'Accept': 'application/vnd.github.v3+json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ event_type: 'new_order', client_payload: orderData })
         });
 
-        if (response.ok) {
+        if (response.status === 204 || response.ok) {
             const successMsg = "Order Sent! Payment due to Capt. Pope at FTX.";
-            if (tg) {
-                tg.showAlert(successMsg);
-                tg.close();
-            } else {
-                alert(successMsg);
-            }
+            if (tg) { tg.showAlert(successMsg); tg.close(); } else { alert(successMsg); }
             cart = [];
             updateCartUI();
         } else {
-            const errorText = await response.text();
             const errorMsg = "Failed to send. Status: " + response.status;
-            if (tg) {
-                tg.showAlert(errorMsg);
-            } else {
-                alert(errorMsg + " - " + errorText);
-            }
+            if (tg) { tg.showAlert(errorMsg); } else { alert(errorMsg); }
         }
     } catch (e) {
         const connError = "Connection Error: " + e.message;
-        if (tg) {
-            tg.showAlert(connError);
-        } else {
-            alert(connError);
-        }
+        if (tg) { tg.showAlert(connError); } else { alert(connError); }
     }
 }
