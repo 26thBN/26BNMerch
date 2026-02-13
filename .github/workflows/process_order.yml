@@ -1,1 +1,73 @@
+name: Process Merch Order
+on:
+  repository_dispatch:
+    types: [new_order]
+
+jobs:
+  update-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Process Order Logic
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          MERCH_CHAT_ID: ${{ secrets.MERCHANDISER_CHAT_ID }}
+          ORDER_DATA: ${{ toJson(github.event.client_payload) }}
+        run: |
+          python - <<EOF
+          import json
+          import os
+          import requests
+
+          # 1. Load Data
+          with open('inventory.json', 'r') as f:
+              db = json.load(f)
+          
+          order = json.loads(os.getenv('ORDER_DATA'))
+          items_bought = order['items']
+          customer = order['customer']
+          
+          # 2. Update Inventory & Check Thresholds
+          alerts = []
+          for bought in items_bought:
+              for item in db['items']:
+                  if item['name'] == bought['name']:
+                      item['stock'] -= bought['quantity']
+                      if item['stock'] <= item['threshold']:
+                          alerts.append(f"⚠️ LOW STOCK: {item['name']} (Only {item['stock']} left!)")
+
+          # 3. Log Order to History
+          db['orders'].append(order)
+
+          with open('inventory.json', 'w') as f:
+              json.dump(db, f, indent=2)
+
+          # 4. Notify Merchandiser via Telegram
+          msg = f"📦 *New Order Received!*\n\nCustomer: {customer}\n"
+          for i in items_bought:
+              msg += f"- {i['name']} x{i['quantity']}\n"
+          msg += f"\nTotal: ${order['total']}\n\n*Payment: In-Person*"
+          
+          url = f"https://api.telegram.org{os.getenv('BOT_TOKEN')}/sendMessage"
+          requests.post(url, data={'chat_id': os.getenv('MERCH_CHAT_ID'), 'text': msg, 'parse_mode': 'Markdown'})
+
+          # 5. Send Low Stock Alerts
+          for alert in alerts:
+              requests.post(url, data={'chat_id': os.getenv('MERCH_CHAT_ID'), 'text': alert})
+          EOF
+
+      - name: Commit & Push Changes
+        run: |
+          git config user.name "Order-Bot"
+          git config user.version "bot@github.com"
+          git add inventory.json
+          git commit -m "Update inventory from order"
+          git push
 
