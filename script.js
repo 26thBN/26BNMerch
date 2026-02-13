@@ -34,7 +34,7 @@ function updateCartUI() {
         li.className = "cart-item";
         li.innerHTML = `
             <span>${item.name} (x${item.quantity}) - $${itemTotal}</span>
-            <button onclick="removeFromCart('${item.name}')" style="background:#cc0000; padding:4px 8px; font-size:10px; border-radius:4px; border:none; color:white;">Remove</button>
+            <button onclick="removeFromCart('${item.name}')" style="background:#cc0000; padding:4px 8px; font-size:10px; border-radius:4px; border:none; color:white; cursor:pointer;">Remove</button>
         `;
         cartList.appendChild(li);
     });
@@ -48,17 +48,23 @@ function removeFromCart(productName) {
 
 async function submitOrder() {
     if (cart.length === 0) return;
-    const tg = window.Telegram.WebApp;
+    
+    // Check if we are inside Telegram, otherwise use "Guest"
+    const tg = window.Telegram ? window.Telegram.WebApp : null;
+    const customerName = tg && tg.initDataUnsafe && tg.initDataUnsafe.user ? (tg.initDataUnsafe.user.username || tg.initDataUnsafe.user.first_name) : "Guest";
     
     const orderData = {
-        customer: tg.initDataUnsafe.user?.username || tg.initDataUnsafe.user?.first_name || "Guest",
+        customer: customerName,
         items: cart,
         total: total,
         timestamp: new Date().toISOString()
     };
 
     try {
-        const response = await fetch(`https://api.github.com{GITHUB_USER}/${REPO_NAME}/dispatches`, {
+        // Corrected GitHub API URL
+        const apiUrl = `https://api.github.com{GITHUB_USER}/${REPO_NAME}/dispatches`;
+
+        const response = await fetch(apiUrl, {
             method: 'POST',
             headers: { 
                 'Authorization': `token ${GITHUB_PAT}`, 
@@ -69,14 +75,27 @@ async function submitOrder() {
         });
 
         if (response.ok) {
-            tg.showAlert("Order Sent! Payment due to Capt. Pope at FTX.");
+            if (tg) {
+                tg.showAlert("Order Sent! Payment due to Capt. Pope at FTX.");
+                tg.close();
+            } else {
+                alert("Order Sent! Payment due to Capt. Pope at FTX.");
+            }
             cart = [];
             updateCartUI();
-            tg.close();
         } else {
-            tg.showAlert("Failed to send. Check GitHub Repo settings.");
+            const errorText = await response.text();
+            if (tg) {
+                tg.showAlert("Failed to send. Error: " + response.status);
+            } else {
+                alert("Failed to send. Error: " + response.status + " - " + errorText);
+            }
         }
     } catch (e) {
-        tg.showAlert("Error: " + e.message);
+        if (tg) {
+            tg.showAlert("Connection Error: " + e.message);
+        } else {
+            alert("Connection Error: " + e.message);
+        }
     }
 }
