@@ -2,7 +2,7 @@ let cart = [];
 let total = 0;
 
 // YOUR CONFIGURATION - Replace with your details
-const GITHUB_USER = "YOUR_GITHUB_USERNAME";
+const GITHUB_USER = "twitchitifititches";
 const REPO_NAME = "26th-bn-merch";
 const GITHUB_PAT = "YOUR_PERSONAL_ACCESS_TOKEN"; // Keep this safe!
 
@@ -91,3 +91,4 @@ async function submitOrder() {
         tg.showAlert("Connection failed. Check your internet.");
     }
 }
+
