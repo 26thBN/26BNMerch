@@ -1,10 +1,10 @@
 let cart = [];
 let total = 0;
 
-// YOUR CONFIGURATION - Replace with your details
-const GITHUB_USER = "twitchitifititches";
+// CONFIGURATION
+const GITHUB_USER = "YOUR_GITHUB_USERNAME";
 const REPO_NAME = "26th-bn-merch";
-const GITHUB_PAT = "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"; // Keep this safe!
+const GITHUB_PAT = "YOUR_PERSONAL_ACCESS_TOKEN";
 
 function addToCart(price, inputId, productName) {
     const qtyInput = document.getElementById(inputId);
@@ -18,7 +18,24 @@ function addToCart(price, inputId, productName) {
     }
 
     updateCartUI();
-    qtyInput.value = 1;
+    qtyInput.value = 1; // Reset input field after adding
+}
+
+function removeFromCart(productName) {
+    cart = cart.filter(item => item.name !== productName);
+    updateCartUI();
+}
+
+function updateQuantity(productName, amount) {
+    const item = cart.find(item => item.name === productName);
+    if (item) {
+        item.quantity += amount;
+        if (item.quantity <= 0) {
+            removeFromCart(productName);
+        } else {
+            updateCartUI();
+        }
+    }
 }
 
 function updateCartUI() {
@@ -30,33 +47,31 @@ function updateCartUI() {
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
+
         const li = document.createElement('li');
+        li.style.display = "flex";
+        li.style.justifyContent = "space-between";
+        li.style.alignItems = "center";
+        li.style.margin = "10px 0";
+        
         li.innerHTML = `
-            ${item.name} x${item.quantity} - $${itemTotal}
-            <button onclick="updateQuantity('${item.name}', -1)">-</button>
-            <button onclick="updateQuantity('${item.name}', 1)">+</button>
+            <span>${item.name} (x${item.quantity}) - $${itemTotal}</span>
+            <div>
+                <button onclick="updateQuantity('${item.name}', -1)">-</button>
+                <button onclick="updateQuantity('${item.name}', 1)">+</button>
+                <button onclick="removeFromCart('${item.name}')" style="background: #dc3545; margin-left: 5px;">Remove</button>
+            </div>
         `;
         cartList.appendChild(li);
     });
-    totalDisplay.innerText = total;
-}
 
-function updateQuantity(productName, amount) {
-    const item = cart.find(item => item.name === productName);
-    if (item) {
-        item.quantity += amount;
-        if (item.quantity <= 0) {
-            cart = cart.filter(i => i.name !== productName);
-        }
-        updateCartUI();
-    }
+    totalDisplay.innerText = total;
 }
 
 async function submitOrder() {
     if (cart.length === 0) return;
     const tg = window.Telegram.WebApp;
     
-    // 1. Prepare the data for the Merchandiser
     const orderData = {
         customer: tg.initDataUnsafe.user?.username || tg.initDataUnsafe.user?.first_name || "Guest",
         items: cart,
@@ -64,7 +79,6 @@ async function submitOrder() {
         timestamp: new Date().toISOString()
     };
 
-    // 2. Wake up the GitHub Action "Worker"
     try {
         const response = await fetch(`https://api.github.com{GITHUB_USER}/${REPO_NAME}/dispatches`, {
             method: 'POST',
@@ -80,7 +94,7 @@ async function submitOrder() {
         });
 
         if (response.ok) {
-            tg.showAlert("Order Sent! Please see the Merchandiser for payment.");
+            tg.showAlert("Order Sent! Payment due at next FTX.");
             cart = [];
             updateCartUI();
             tg.close();
@@ -88,8 +102,6 @@ async function submitOrder() {
             tg.showAlert("Error sending order. Please try again.");
         }
     } catch (error) {
-        tg.showAlert("Connection failed. Check your internet.");
+        tg.showAlert("Connection failed.");
     }
 }
-
-
