@@ -52,23 +52,6 @@
       "stock": 20
     },
     {
-      "id": "Flag#1",
-      "name": "250 Year American Wall Flag",
-      "description": "Celebrate 250 of World Dominance!  American Made High Quality Polyester 5' x 3'",
-      "price": 75,
-      "threshold": 2,
-      "image": "https://i.imgur.com/p09CXKy.png",
-      "sizes": {
-        "S": 0,
-        "M": 0,
-        "L": 5,
-        "XL": 0,
-        "2XL": 0,
-        "3XL": 0
-      },
-      "stock": 5
-    },
-    {
       "id": "shirt#1",
       "name": "Green 26 BN T",
       "description": "100% cotton battalion tee.",
@@ -84,6 +67,23 @@
         "3XL": 5
       },
       "stock": 40
+    },
+    {
+      "id": "Flag#1",
+      "name": "250 Year American Wall Flag",
+      "description": "Celebrate 250 of World Dominance!  American Made High Quality Polyester           5' x 3'",
+      "price": 75,
+      "threshold": 2,
+      "image": "https://i.imgur.com/p09CXKy.png",
+      "sizes": {
+        "S": 0,
+        "M": 0,
+        "L": 5,
+        "XL": 0,
+        "2XL": 0,
+        "3XL": 0
+      },
+      "stock": 5
     }
   ],
   "orders": []
