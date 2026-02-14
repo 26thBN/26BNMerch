@@ -1,7 +1,22 @@
 {
   "items": [
-    { "id": "shirt", "name": "Epic Shirt", "price": 35, "stock": 50, "threshold": 5, "description": "100% cotton battalion tee." },
-    { "id": "hoodie", "name": "Hoodie", "price": 50, "stock": 20, "threshold": 3, "description": "Heavyweight olive drab hoodie." }
+    {
+      "id": "hoodie",
+      "name": "Hoodie",
+      "price": 50,
+      "stock": 20,
+      "threshold": 3,
+      "description": "Heavyweight olive drab hoodie."
+    },
+    {
+      "id": "shirt",
+      "name": "Green 26 BN T",
+      "description": "100% cotton battalion tee.",
+      "price": 35,
+      "stock": 50,
+      "threshold": 5,
+      "image": "https://i.imgur.com/4ihLgO5.jpeg"
+    }
   ],
   "orders": []
 }
