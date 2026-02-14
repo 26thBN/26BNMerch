@@ -16,6 +16,15 @@
       "stock": 50,
       "threshold": 5,
       "image": "https://i.imgur.com/4ihLgO5.jpeg"
+    },
+    {
+      "id": "potato",
+      "name": "potato",
+      "description": "potato",
+      "price": 4,
+      "stock": 4,
+      "threshold": 1,
+      "image": ""
     }
   ],
   "orders": []
