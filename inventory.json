@@ -35,23 +35,6 @@
       "stock": 40
     },
     {
-      "id": "shirt",
-      "name": "Green 26 BN Tee",
-      "description": "100% cotton 1776 Gree Tee with white flag",
-      "price": 35,
-      "threshold": 10,
-      "image": "https://i.imgur.com/E8IvDlp.png",
-      "sizes": {
-        "S": 8,
-        "M": 12,
-        "L": 16,
-        "XL": 12,
-        "2XL": 6,
-        "3XL": 6
-      },
-      "stock": 60
-    },
-    {
       "id": "Beanie#1",
       "name": "Battalion Beanie",
       "description": "Olive Green Beanie with 26th Battalion Insignia (One Size)",
@@ -67,6 +50,40 @@
         "3XL": 0
       },
       "stock": 30
+    },
+    {
+      "id": "Tumbler#1",
+      "name": "26th Battalion Tumbler",
+      "description": "Drink in style with this thermal insulated Tumbler featuring the Battalion Insignia",
+      "price": 20,
+      "threshold": 5,
+      "image": "https://i.imgur.com/cg1nJ7e.png",
+      "sizes": {
+        "S": 0,
+        "M": 0,
+        "L": 20,
+        "XL": 0,
+        "2XL": 0,
+        "3XL": 0
+      },
+      "stock": 20
+    },
+    {
+      "id": "Flag#1",
+      "name": "250 Year American Wall Flag",
+      "description": "Celebrate 250 of World Dominance!  American Made High Quality Polyester 5' x 3'",
+      "price": 75,
+      "threshold": 2,
+      "image": "https://i.imgur.com/p09CXKy.png",
+      "sizes": {
+        "S": 0,
+        "M": 0,
+        "L": 5,
+        "XL": 0,
+        "2XL": 0,
+        "3XL": 0
+      },
+      "stock": 5
     }
   ],
   "orders": []
