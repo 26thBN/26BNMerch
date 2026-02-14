@@ -55,4 +55,139 @@ function updateCartUI() {
     li.innerHTML = `
       <span>${escapeHtml(item.name)} (x${item.quantity}) - $${itemTotal.toFixed(2)}</span>
       <button onclick="removeFromCart('${escapeQuotes(item.name)}')"
-        style="backgroun
+        style="background:#cc0000; padding:4px 8px; font-size:10px; border-radius:4px; border:none; color:white; cursor:pointer;">
+        Remove
+      </button>
+    `;
+
+    cartList.appendChild(li);
+  });
+
+  totalDisplay.innerText = total.toFixed(2);
+}
+
+function removeFromCart(productName) {
+  cart = cart.filter(item => item.name !== productName);
+  updateCartUI();
+}
+
+async function submitOrder() {
+  if (cart.length === 0) return;
+
+  // Telegram WebApp user info (if running inside Telegram)
+  const tg = window.Telegram ? window.Telegram.WebApp : null;
+  const customerName =
+    (tg && tg.initDataUnsafe && tg.initDataUnsafe.user)
+      ? (tg.initDataUnsafe.user.username || tg.initDataUnsafe.user.first_name)
+      : "Guest";
+
+  const orderData = {
+    customer: customerName,
+    items: cart,
+    total: total,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    await fetch(PROXY_URL, {
+      method: "POST",
+      mode: "no-cors",
+      cache: "no-cache",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(orderData)
+    });
+
+    const successMsg = "Order Sent! Payment due to Capt. Pope at FTX.";
+    if (tg) {
+      tg.showAlert(successMsg);
+      tg.close();
+    } else {
+      alert(successMsg);
+    }
+
+    cart = [];
+    updateCartUI();
+
+  } catch (e) {
+    const errorMsg = "Connection Error: " + e.message;
+    if (tg) tg.showAlert(errorMsg);
+    else alert(errorMsg);
+  }
+}
+
+// ------------------------------
+// LOAD & RENDER PRODUCTS
+// ------------------------------
+
+async function loadInventoryAndRender() {
+  const productsEl = document.getElementById("products");
+  if (!productsEl) return;
+
+  productsEl.innerHTML = "Loading products…";
+
+  try {
+    const res = await fetch(INVENTORY_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const data = await res.json();
+    const items = Array.isArray(data.items) ? data.items : [];
+
+    productsEl.innerHTML = "";
+
+    items.forEach(item => {
+      const name = item.name || "Unnamed";
+      const id = (item.id || name).toString();
+      const safeId = id.replace(/[^a-zA-Z0-9_-]/g, "_");
+      const qtyInputId = `qty_${safeId}`;
+
+      const price = Number(item.price || 0);
+      const stock = Number(item.stock || 0);
+
+      const div = document.createElement("div");
+      div.className = "product";
+
+      const imgHtml = item.image
+        ? `<img src="${item.image}" alt="${escapeHtml(name)}"
+             style="width:90px;height:90px;object-fit:cover;border-radius:8px;margin:0 auto 10px auto;display:block;">`
+        : "";
+
+      // ✅ Reorder/threshold is intentionally NOT shown on storefront
+      div.innerHTML = `
+        ${imgHtml}
+        <span class="product-info">${escapeHtml(name)} - $${price.toFixed(2)}</span>
+        ${item.description ? `<div style="margin-bottom:8px;">${escapeHtml(item.description)}</div>` : ""}
+        <div style="margin-bottom:10px; color:#bbb;">Stock: ${stock}</div>
+        <div class="controls">
+          <input id="${qtyInputId}" type="number" min="1" value="1" />
+          <button onclick="addToCart(${price}, '${qtyInputId}', '${escapeQuotes(name)}')">Add</button>
+        </div>
+      `;
+
+      productsEl.appendChild(div);
+    });
+
+    updateCartUI();
+
+  } catch (err) {
+    productsEl.innerHTML = `Failed to load inventory. (${escapeHtml(err.message)})`;
+  }
+}
+
+// Helpers
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+function escapeQuotes(str) {
+  return String(str).replaceAll("'", "\\'");
+}
+
+// Run on load
+document.addEventListener("DOMContentLoaded", () => {
+  loadInventoryAndRender();
+  updateCartUI();
+});
