@@ -7,7 +7,7 @@
       "price": 50,
       "stock": 20,
       "threshold": 3,
-      "image": "https://imgur.com/QWCcIyl"
+      "image": "https://i.imgur.com/QWCcIyl.png"
     },
     {
       "id": "Shirt #1",
@@ -16,25 +16,7 @@
       "price": 25,
       "stock": 25,
       "threshold": 5,
-      "image": "https://imgur.com/E8IvDlp"
-    },
-    {
-      "id": "Tumbler #1",
-      "name": "Member Tumbler",
-      "description": "Exclusive for Patched members. Black steel insulated tumbler featuring Battalion logo",
-      "price": 25,
-      "stock": 20,
-      "threshold": 5,
-      "image": "https://imgur.com/cg1nJ7e"
-    },
-    {
-      "id": "AmericanFlag #1",
-      "name": "250 year American Flag",
-      "description": "Celebrate American Pride with this high quality wall flag",
-      "price": 75,
-      "stock": 10,
-      "threshold": 2,
-      "image": "https://imgur.com/p09CXKy"
+      "image": "https://i.imgur.com/E8IvDlp.png"
     },
     {
       "id": "beanie#1",
@@ -43,7 +25,25 @@
       "price": 15,
       "stock": 20,
       "threshold": 5,
-      "image": "https://imgur.com/DbrSy7d"
+      "image": "https://i.imgur.com/jcRiryv.png"
+    },
+    {
+      "id": "AmericanFlag #1",
+      "name": "250 year American Flag",
+      "description": "Celebrate American Pride with this high quality wall flag",
+      "price": 75,
+      "stock": 10,
+      "threshold": 2,
+      "image": "https://i.imgur.com/2ghAYKK.png"
+    },
+    {
+      "id": "Tumbler #1",
+      "name": "Member Tumbler",
+      "description": "Exclusive for Patched members. Black steel insulated tumbler featuring Battalion logo",
+      "price": 25,
+      "stock": 20,
+      "threshold": 5,
+      "image": "https://i.imgur.com/cg1nJ7e.png"
     }
   ],
   "orders": []
