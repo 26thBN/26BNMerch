@@ -1,30 +1,31 @@
 {
   "items": [
     {
-      "id": "hoodie",
-      "name": "Hoodie",
+      "id": "Hoodie #1",
+      "name": "Green Flag Hoodie",
+      "description": "Heavyweight olive drab hoodie featuring distressed American flag",
       "price": 50,
       "stock": 20,
       "threshold": 3,
-      "description": "Heavyweight olive drab hoodie."
+      "image": "https://imgur.com/QWCcIyl"
     },
     {
-      "id": "shirt",
-      "name": "Green 26 BN T",
-      "description": "100% cotton battalion tee.",
-      "price": 35,
-      "stock": 50,
+      "id": "Shirt #1",
+      "name": "Founders Green T",
+      "description": "100% cotton tee with white distressed flag back and 1776 front",
+      "price": 25,
+      "stock": 25,
       "threshold": 5,
-      "image": "https://i.imgur.com/4ihLgO5.jpeg"
+      "image": "https://imgur.com/E8IvDlp"
     },
     {
-      "id": "potato",
-      "name": "potato",
-      "description": "potato",
-      "price": 4,
-      "stock": 4,
-      "threshold": 1,
-      "image": ""
+      "id": "Tumbler #1",
+      "name": "Member Tumbler",
+      "description": "Exclusive for Patched members. Black steel insulated tumbler featuring Battalion logo",
+      "price": 25,
+      "stock": 20,
+      "threshold": 5,
+      "image": "https://imgur.com/cg1nJ7e"
     }
   ],
   "orders": []
