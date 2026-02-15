@@ -9,28 +9,26 @@
 
 <div id="app">
 
-    <!-- HEADER -->
     <div class="header">
-        <img src="https://raw.githubusercontent.com/26thBN/26BNMerch/main/logo.png" 
-             alt="26th BN Logo" 
-             class="site-logo">
         <h1>26th BN Merch Shop</h1>
     </div>
 
-    <!-- PRODUCTS -->
+    <div class="callsign-section">
+        <label>Enter Your Callsign:</label><br>
+        <input type="text" id="callsign" placeholder="Ex: Ghost-Actual">
+    </div>
+
+    <hr>
+
     <div id="products"></div>
 
     <hr>
 
-    <!-- CART -->
-    <div class="cart-section">
-        <h3>Your Cart</h3>
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="total">0</span></p>
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
 
-        <button onclick="clearCart()">Clear Cart</button>
-        <button id="checkout" onclick="submitOrder()">Submit Order</button>
-    </div>
+    <button onclick="submitOrder()">Submit Order</button>
 
 </div>
 
