@@ -1,35 +1,25 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>26th BN Merch Store</title>
-  <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8">
+    <title>26th BN Merch Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div id="app">
-    <img src="./logo.png" alt="26th BN Logo" style="max-width:220px; width:100%; height:auto; margin: 10px auto 0 auto; display:block;" />
 
-    <h1>26th BN Merch Store</h1>
+<div id="app">
+    <h1>26th BN Merch Shop</h1>
 
-    <!-- PRODUCTS WILL APPEAR HERE (pulled from inventory.json) -->
-    <div id="products">Loading products…</div>
+    <div id="products"></div>
 
-    <hr />
+    <hr>
 
     <h3>Your Cart</h3>
     <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button id="checkout" onclick="submitOrder()">Submit Order</button>
+</div>
 
-    <h3>Total: $<span id="total">0.00</span></h3>
-
-    <button id="checkout" onclick="submitOrder()">SUBMIT ORDER</button>
-
-    <div id="delivery-msg">
-      All orders will be delivered during the next available FTX. Payments due in full and payable to Capt. Pope or in his absence LT. Kam.
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
