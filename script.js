@@ -4,7 +4,6 @@ let total = 0;
 const PROXY_URL = "https://script.google.com/macros/s/AKfycbyEk3khZc36ezbMMTSVIBYv-Jh_3jN6-R7C-541X8kO70_6xuDRLnA85S8DwMEb4uXC/exec";
 const INVENTORY_URL = "https://raw.githubusercontent.com/26thBN/26BNMerch/main/inventory.json";
 
-
 async function loadProducts() {
     const response = await fetch(INVENTORY_URL);
     const data = await response.json();
@@ -21,6 +20,7 @@ async function loadProducts() {
 
         if (item.sizes) {
             let soldCount = 0;
+
             Object.keys(item.sizes).forEach(size => {
                 const stock = item.sizes[size];
                 if (stock === 0) soldCount++;
@@ -78,7 +78,14 @@ function addToCart(id, name, price) {
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
 
-    cart.push({ id, name, price, quantity: qty, size });
+    // If same item + same size already exists → increase quantity
+    const existing = cart.find(item => item.id === id && item.size === size);
+
+    if (existing) {
+        existing.quantity += qty;
+    } else {
+        cart.push({ id, name, price, quantity: qty, size });
+    }
 
     updateCart();
 }
@@ -88,15 +95,20 @@ function updateCart() {
     list.innerHTML = "";
     total = 0;
 
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         const li = document.createElement("li");
         const lineTotal = item.price * item.quantity;
         total += lineTotal;
 
-        li.innerText =
-            `${item.name}` +
-            (item.size ? ` (${item.size})` : "") +
-            ` x${item.quantity} - $${lineTotal}`;
+        li.innerHTML = `
+            ${item.name}
+            ${item.size ? `(${item.size})` : ""}
+            x${item.quantity}
+            - $${lineTotal}
+            <button onclick="changeQty(${index}, -1)">-</button>
+            <button onclick="changeQty(${index}, 1)">+</button>
+            <button onclick="removeItem(${index})">Remove</button>
+        `;
 
         list.appendChild(li);
     });
@@ -104,9 +116,32 @@ function updateCart() {
     document.getElementById("total").innerText = total;
 }
 
+function changeQty(index, amount) {
+    cart[index].quantity += amount;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+
+    updateCart();
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function clearCart() {
+    cart = [];
+    updateCart();
+}
+
 async function submitOrder() {
 
-    if (cart.length === 0) return;
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
 
     const orderData = {
         customer: "TelegramUser",
@@ -116,19 +151,23 @@ async function submitOrder() {
     };
 
     try {
-
-        await fetch(PROXY_URL, {
+        const response = await fetch(PROXY_URL, {
             method: "POST",
-            mode: "no-cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(orderData)
         });
 
-        alert(
-            "Order submitted successfully!\n\n" +
-            "Please check your email for confirmation.\n\n" +
-            "Payment due to Capt. Pope at FTX."
-        );
+        const result = await response.json();
+
+        if (result.success && result.orderNumber) {
+            alert(
+                `Order #${result.orderNumber} submitted successfully!\n\n` +
+                `Please save your order number for reference.\n\n` +
+                `Payment due to Capt. Pope at FTX.`
+            );
+        } else {
+            alert("Order submitted, but confirmation could not be verified.");
+        }
 
         cart = [];
         updateCart();
@@ -140,4 +179,3 @@ async function submitOrder() {
 }
 
 loadProducts();
-
