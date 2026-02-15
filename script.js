@@ -4,6 +4,7 @@ let total = 0;
 const PROXY_URL = "https://script.google.com/macros/s/AKfycbyEk3khZc36ezbMMTSVIBYv-Jh_3jN6-R7C-541X8kO70_6xuDRLnA85S8DwMEb4uXC/exec";
 const INVENTORY_URL = "https://raw.githubusercontent.com/26thBN/26BNMerch/main/inventory.json";
 
+
 async function loadProducts() {
     const response = await fetch(INVENTORY_URL);
     const data = await response.json();
@@ -24,9 +25,11 @@ async function loadProducts() {
                 const stock = item.sizes[size];
                 if (stock === 0) soldCount++;
 
-                sizeOptions += `<option value="${size}" ${stock === 0 ? "disabled" : ""}>
-                ${size} ${stock === 0 ? "(Sold Out)" : ""}
-                </option>`;
+                sizeOptions += `
+                    <option value="${size}" ${stock === 0 ? "disabled" : ""}>
+                        ${size} ${stock === 0 ? "(Sold Out)" : ""}
+                    </option>
+                `;
             });
 
             if (soldCount === Object.keys(item.sizes).length) {
@@ -41,12 +44,20 @@ async function loadProducts() {
             <h3>${item.name}</h3>
             <p>${item.description}</p>
             <p>$${item.price}</p>
-            ${item.stock <= item.threshold && item.stock > 0 ? `<div class="low-stock">⚠ LOW STOCK</div>` : ""}
-            ${item.sizes ? `<select id="size-${item.id}">${sizeOptions}</select>` : ""}
+
+            ${item.stock <= item.threshold && item.stock > 0
+                ? `<div class="low-stock">⚠ LOW STOCK</div>`
+                : ""}
+
+            ${item.sizes
+                ? `<select id="size-${item.id}">${sizeOptions}</select>`
+                : ""}
+
             <br>
             <input type="number" id="qty-${item.id}" value="1" min="1">
             <br>
-            <button ${allSoldOut ? "disabled" : ""} onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
+            <button ${allSoldOut ? "disabled" : ""}
+                onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
                 ${allSoldOut ? "Sold Out" : "Add to Cart"}
             </button>
         `;
@@ -81,7 +92,12 @@ function updateCart() {
         const li = document.createElement("li");
         const lineTotal = item.price * item.quantity;
         total += lineTotal;
-        li.innerText = `${item.name}${item.size ? " ("+item.size+")" : ""} x${item.quantity} - $${lineTotal}`;
+
+        li.innerText =
+            `${item.name}` +
+            (item.size ? ` (${item.size})` : "") +
+            ` x${item.quantity} - $${lineTotal}`;
+
         list.appendChild(li);
     });
 
@@ -99,18 +115,35 @@ async function submitOrder() {
         timestamp: new Date().toISOString()
     };
 
-    await fetch(PROXY_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(orderData)
-    });
+    try {
 
-    alert("Order Submitted Successfully!");
+        const response = await fetch(PROXY_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(orderData)
+        });
 
-    cart = [];
-    updateCart();
-    loadProducts();
+        const result = await response.json();
+
+        if (result.success && result.orderNumber) {
+
+            alert(
+                `Order #${result.orderNumber} submitted successfully!\n\n` +
+                `Please save your order number for reference.\n\n` +
+                `Payment due to Capt. Pope at FTX.`
+            );
+
+        } else {
+            alert("Order submitted, but confirmation could not be verified.");
+        }
+
+        cart = [];
+        updateCart();
+        loadProducts();
+
+    } catch (error) {
+        alert("There was an error submitting your order. Please try again.");
+    }
 }
 
 loadProducts();
-
