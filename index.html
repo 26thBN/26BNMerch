@@ -8,16 +8,30 @@
 <body>
 
 <div id="app">
-    <h1>26th BN Merch Shop</h1>
 
+    <!-- HEADER -->
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/26thBN/26BNMerch/main/logo.png" 
+             alt="26th BN Logo" 
+             class="site-logo">
+        <h1>26th BN Merch Shop</h1>
+    </div>
+
+    <!-- PRODUCTS -->
     <div id="products"></div>
 
     <hr>
 
-    <h3>Your Cart</h3>
-    <ul id="cart-items"></ul>
-    <p>Total: $<span id="total">0</span></p>
-    <button id="checkout" onclick="submitOrder()">Submit Order</button>
+    <!-- CART -->
+    <div class="cart-section">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total">0</span></p>
+
+        <button onclick="clearCart()">Clear Cart</button>
+        <button id="checkout" onclick="submitOrder()">Submit Order</button>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
