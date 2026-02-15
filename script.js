@@ -136,38 +136,50 @@ async function submitOrder() {
         return;
     }
 
+    const callsignInput = document.getElementById("callsign");
+    const callsign = callsignInput.value.trim();
+
+    if (!callsign) {
+        alert("Please enter your callsign before submitting.");
+        return;
+    }
+
     const orderData = {
-        customer: "TelegramUser",
+        callsign: callsign,
         items: cart,
         total: total,
         timestamp: new Date().toISOString()
     };
 
     try {
-
-        // 🔥 THIS IS THE FIX
-        await fetch(PROXY_URL, {
+        const response = await fetch(PROXY_URL, {
             method: "POST",
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "text/plain"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(orderData)
         });
 
-        alert(
-            "Order submitted successfully!\n\n" +
-            "Please save your confirmation details.\n\n" +
-            "Payment due to Capt. Pope at FTX."
-        );
+        const result = await response.json();
+
+        if (result.success && result.orderNumber) {
+            alert(
+                `Order #${result.orderNumber} submitted successfully!\n\n` +
+                `Save this order number.\n\n` +
+                `Payment due to Capt. Pope at FTX.`
+            );
+        } else {
+            alert("Order submitted, but confirmation could not be verified.");
+        }
 
         cart = [];
         updateCart();
         loadProducts();
+        callsignInput.value = "";
 
     } catch (error) {
         alert("There was an error submitting your order. Please try again.");
     }
 }
 
+
 loadProducts();
+
