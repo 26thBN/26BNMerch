@@ -72,6 +72,15 @@
       "threshold": 10,
       "image": "",
       "stock": 5000
+    },
+    {
+      "id": "book ID",
+      "name": "the wonderful world of TOFU TOASTEROKI",
+      "description": "SOME ANIME SHIT BLITTITY BLOOH BLAH",
+      "price": 75000,
+      "threshold": 0,
+      "image": "https://imgur.com/a/E1BG0PK",
+      "stock": 5
     }
   ],
   "orders": []
