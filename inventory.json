@@ -63,15 +63,6 @@
       "threshold": 2,
       "image": "https://i.imgur.com/p09CXKy.png",
       "stock": 5
-    },
-    {
-      "id": "love the USA",
-      "name": "Nipple Cozy",
-      "description": "KEEP YOUR NERPS TOASTY",
-      "price": 5000,
-      "threshold": 10,
-      "image": "",
-      "stock": 5000
     }
   ],
   "orders": []
