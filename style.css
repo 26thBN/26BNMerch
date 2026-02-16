@@ -2,24 +2,33 @@
 /* HEADER STYLING */
 /* ========================= */
 
+/* ================= HEADER ================= */
+
 .header {
+    width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    padding-top: 30px;
 }
 
 .logo {
-    width: 150px;   /* reduced ~50% */
-    margin-bottom: 20px;
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.stencil-wrapper {
+    width: 100%;
 }
 
 .stencil-title {
-    display: block;
-    width: 100%;
-    max-width: 700px;
-    max-height: 150px;
+    width: 95%;
+    max-width: 1200px;
     height: auto;
-    margin: 0 auto 30px auto;
+    display: block;
+    margin: 0 auto 40px auto;
 }
+
 
 
 
@@ -146,6 +155,7 @@ button:hover {
 
 
 }
+
 
 
 
