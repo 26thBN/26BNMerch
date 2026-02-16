@@ -25,9 +25,9 @@
       "threshold": 5,
       "image": "https://i.imgur.com/jcRiryv.png",
       "sizes": {
-        "OSFA": 29
+        "OSFA": 28
       },
-      "stock": 29
+      "stock": 28
     },
     {
       "id": "Tumbler#1",
@@ -49,11 +49,11 @@
         "S": 2,
         "M": 3,
         "L": 10,
-        "XL": 10,
+        "XL": 9,
         "2XL": 8,
         "3XL": 5
       },
-      "stock": 38
+      "stock": 37
     },
     {
       "id": "Flag#1",
@@ -182,7 +182,29 @@
       ],
       "total": 75,
       "timestamp": "2026-02-16T00:10:28.443Z"
+    },
+    {
+      "orderNumber": 1006,
+      "customer": "Test",
+      "items": [
+        {
+          "id": "Beanie#1",
+          "name": "Battalion Beanie",
+          "price": 10,
+          "quantity": 1,
+          "size": "OSFA"
+        },
+        {
+          "id": "shirt#1",
+          "name": "Green 26 BN T",
+          "price": 15,
+          "quantity": 1,
+          "size": "XL"
+        }
+      ],
+      "total": 25,
+      "timestamp": "2026-02-16T01:32:53.784Z"
     }
   ],
-  "lastOrderNumber": 1005
+  "lastOrderNumber": 1006
 }
