@@ -149,7 +149,7 @@ if (!customerEmail) {
         return;
     }
 
-    const customerEmail = document.getElementById("customerEmail").value.trim();
+   
 
 const orderData = {
     customer: callsign,
@@ -184,5 +184,6 @@ const orderData = {
 }
 
 loadProducts();
+
 
 
