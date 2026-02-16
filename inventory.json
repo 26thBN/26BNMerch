@@ -10,12 +10,12 @@
       "sizes": {
         "S": 1,
         "M": 3,
-        "L": 10,
+        "L": 7,
         "XL": 10,
         "2XL": 10,
         "3XL": 4
       },
-      "stock": 38
+      "stock": 35
     },
     {
       "id": "Beanie#1",
@@ -152,7 +152,22 @@
       ],
       "total": 165,
       "timestamp": "2026-02-16T00:00:24.999Z"
+    },
+    {
+      "orderNumber": 1004,
+      "customer": "Krios Test Order",
+      "items": [
+        {
+          "id": "hoodie",
+          "name": "Heavyweight Olive Drab Hoodie",
+          "price": 40,
+          "quantity": 3,
+          "size": "L"
+        }
+      ],
+      "total": 120,
+      "timestamp": "2026-02-16T00:09:18.516Z"
     }
   ],
-  "lastOrderNumber": 1003
+  "lastOrderNumber": 1004
 }
