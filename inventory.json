@@ -46,14 +46,14 @@
       "threshold": 10,
       "image": "https://i.imgur.com/E8IvDlp.png",
       "sizes": {
-        "S": 2,
+        "S": -3,
         "M": 3,
         "L": 10,
         "XL": 9,
         "2XL": 8,
         "3XL": 5
       },
-      "stock": 37
+      "stock": 32
     },
     {
       "id": "Flag#1",
@@ -204,7 +204,22 @@
       ],
       "total": 25,
       "timestamp": "2026-02-16T01:32:53.784Z"
+    },
+    {
+      "orderNumber": 1007,
+      "customer": "KRIOS TEST ORDER",
+      "items": [
+        {
+          "id": "shirt#1",
+          "name": "Green 26 BN T",
+          "price": 15,
+          "quantity": 5,
+          "size": "S"
+        }
+      ],
+      "total": 75,
+      "timestamp": "2026-02-16T01:43:22.459Z"
     }
   ],
-  "lastOrderNumber": 1006
+  "lastOrderNumber": 1007
 }
