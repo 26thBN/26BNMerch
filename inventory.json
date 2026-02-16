@@ -50,10 +50,10 @@
         "M": 3,
         "L": 10,
         "XL": 10,
-        "2XL": 9,
+        "2XL": 8,
         "3XL": 5
       },
-      "stock": 39
+      "stock": 38
     },
     {
       "id": "Flag#1",
@@ -62,7 +62,7 @@
       "price": 75,
       "threshold": 2,
       "image": "https://i.imgur.com/p09CXKy.png",
-      "stock": 3
+      "stock": 1
     }
   ],
   "orders": [
@@ -130,7 +130,29 @@
       ],
       "total": 200,
       "timestamp": "2026-02-15T23:57:43.744Z"
+    },
+    {
+      "orderNumber": 1003,
+      "customer": "Krios Test Order",
+      "items": [
+        {
+          "id": "Flag#1",
+          "name": "250 Year American Wall Flag",
+          "price": 75,
+          "quantity": 2,
+          "size": null
+        },
+        {
+          "id": "shirt#1",
+          "name": "Green 26 BN T",
+          "price": 15,
+          "quantity": 1,
+          "size": "2XL"
+        }
+      ],
+      "total": 165,
+      "timestamp": "2026-02-16T00:00:24.999Z"
     }
   ],
-  "lastOrderNumber": 1002
+  "lastOrderNumber": 1003
 }
