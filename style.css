@@ -40,13 +40,25 @@ body {
 }
 
 #app {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 
 /* ========================= */
-/* PRODUCTS */
+/* PRODUCT GRID */
+/* ========================= */
+
+#products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+/* ========================= */
+/* PRODUCT CARD */
 /* ========================= */
 
 .product {
@@ -55,32 +67,44 @@ body {
     border-radius: 8px;
     position: relative;
 
-    /* NEW — forces equal clean layout */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;                /* Forces equal height */
 }
 
+/* Product image */
 .product img {
     width: 200px;
     border-radius: 6px;
     margin: 0 auto 15px auto;
 }
 
+/* Title */
 .product h3 {
     margin: 10px 0;
+    min-height: 52px;           /* Forces title alignment */
 }
 
+/* Description */
 .product p {
     margin: 5px 0;
 }
 
-/* Make description area consistent height */
+/* Force description block same height */
 .product p:nth-of-type(1) {
-    min-height: 48px;
+    min-height: 60px;
 }
 
-/* Controls always align at bottom */
+/* PRICE spacing */
+.product p:nth-of-type(2) {
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/* CONTROLS SECTION */
+/* ========================= */
+
+/* This pushes controls to bottom evenly */
 .product select,
 .product input,
 .product button {
@@ -90,19 +114,27 @@ body {
     display: block;
 }
 
+/* Quantity input */
 .product input[type="number"] {
-    padding: 6px;
+    padding: 8px;
     border-radius: 4px;
     border: 1px solid #444;
     background: #2a2a2a;
     color: white;
     text-align: center;
+    font-size: 16px;
 }
 
-/* Cleaner spacing before controls */
+/* Add to Cart button */
 .product button {
-    margin-top: 12px;
+    margin-top: auto;           /* THIS locks button alignment */
+    padding: 10px 16px;
 }
+
+
+/* ========================= */
+/* LOW STOCK / SOLD */
+/* ========================= */
 
 .low-stock {
     background: #cc8800;
@@ -143,7 +175,6 @@ button {
     background: #0088cc;
     color: white;
     border: none;
-    padding: 10px 16px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
@@ -171,17 +202,9 @@ button:hover {
 
 
 /* ========================= */
-/* PRODUCT GRID */
+/* MOBILE */
 /* ========================= */
 
-#products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 20px;
-}
-
-/* Mobile fallback */
 @media (max-width: 700px) {
     #products {
         grid-template-columns: 1fr;
