@@ -1,3 +1,31 @@
+/* ========================= */
+/* HEADER STYLING */
+/* ========================= */
+
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50%;   /* 50% smaller as requested */
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.stencil-wrapper {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.stencil-title {
+    width: 100%;
+    max-width: 1200px;
+}
+
+
 @font-face {
     font-family: 'Warband';
     src: url('Warband Stencil Textured.otf') format('opentype');
@@ -121,6 +149,7 @@ button:hover {
 
 
 }
+
 
 
 
