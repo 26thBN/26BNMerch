@@ -72,6 +72,15 @@
       "threshold": 1,
       "image": "https://i.imgur.com/dsjlmPI.jpeg",
       "stock": 1000
+    },
+    {
+      "id": "item 8675309",
+      "name": "CHALLENGE COIN",
+      "description": "ADLKJSDFL;AJDF;LJASDF;LKJASDKLJASDFJK",
+      "price": 20,
+      "threshold": 5,
+      "image": "",
+      "stock": 30
     }
   ],
   "orders": [
