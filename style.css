@@ -113,10 +113,16 @@ button:hover {
     margin: 10px 0 20px 0;
 }
 
+.stencil-title {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto 20px auto;
+    display: block;
+}
+
 
 }
 
-}
 
 
 
