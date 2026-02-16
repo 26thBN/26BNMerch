@@ -9,7 +9,7 @@
 
 /* Main round logo */
 .logo {
-    width: 140px;   /* adjust if needed */
+    width: 140px;
     height: auto;
     display: block;
     margin: 0 auto 20px auto;
@@ -52,14 +52,56 @@ body {
 .product {
     background: #1e1e1e;
     padding: 20px;
-    margin-bottom: 25px;
     border-radius: 8px;
     position: relative;
+
+    /* NEW — forces equal clean layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product img {
     width: 200px;
     border-radius: 6px;
+    margin: 0 auto 15px auto;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+/* Make description area consistent height */
+.product p:nth-of-type(1) {
+    min-height: 48px;
+}
+
+/* Controls always align at bottom */
+.product select,
+.product input,
+.product button {
+    width: 100%;
+    max-width: 220px;
+    margin: 8px auto;
+    display: block;
+}
+
+.product input[type="number"] {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #2a2a2a;
+    color: white;
+    text-align: center;
+}
+
+/* Cleaner spacing before controls */
+.product button {
+    margin-top: 12px;
 }
 
 .low-stock {
@@ -101,10 +143,10 @@ button {
     background: #0088cc;
     color: white;
     border: none;
-    padding: 8px 16px;
-    margin-top: 10px;
+    padding: 10px 16px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 button:hover {
