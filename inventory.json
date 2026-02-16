@@ -63,6 +63,15 @@
       "threshold": 2,
       "image": "https://i.imgur.com/p09CXKy.png",
       "stock": 99
+    },
+    {
+      "id": "WDCSticker#1",
+      "name": "WDC DECAL (Not For Sale)",
+      "description": "Comprised of Kevlar, these decals will last until Rapture",
+      "price": 100000000,
+      "threshold": 1,
+      "image": "https://i.imgur.com/dsjlmPI.jpeg",
+      "stock": 1000
     }
   ],
   "orders": [
