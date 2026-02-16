@@ -80,4 +80,19 @@ button:hover {
     display: inline-block;
 }
 
+/* Product Grid Layout */
+#products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Mobile fallback */
+@media (max-width: 700px) {
+    #products {
+        grid-template-columns: 1fr;
+    }
+}
+
 
