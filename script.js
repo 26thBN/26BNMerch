@@ -143,12 +143,16 @@ async function submitOrder() {
         return;
     }
 
-    const orderData = {
-        customer: callsign,
-        items: cart,
-        total: total,
-        timestamp: new Date().toISOString()
-    };
+    const customerEmail = document.getElementById("customerEmail").value.trim();
+
+const orderData = {
+    customer: callsign,
+    customerEmail: customerEmail || null,
+    items: cart,
+    total: total,
+    timestamp: new Date().toISOString()
+};
+
 
     try {
         await fetch(PROXY_URL, {
@@ -174,3 +178,4 @@ async function submitOrder() {
 }
 
 loadProducts();
+
