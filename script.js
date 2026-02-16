@@ -137,6 +137,12 @@ async function submitOrder() {
     }
 
     const callsign = document.getElementById("callsign").value.trim();
+const customerEmail = document.getElementById("customerEmail").value.trim();
+
+if (!customerEmail) {
+    alert("Email is required.");
+    return;
+}
 
     if (!callsign) {
         alert("Please enter your callsign.");
@@ -147,7 +153,7 @@ async function submitOrder() {
 
 const orderData = {
     customer: callsign,
-    customerEmail: customerEmail || null,
+    customerEmail: customerEmail,
     items: cart,
     total: total,
     timestamp: new Date().toISOString()
@@ -178,4 +184,5 @@ const orderData = {
 }
 
 loadProducts();
+
 
