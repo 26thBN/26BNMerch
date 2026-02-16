@@ -3,29 +3,21 @@
 /* ========================= */
 
 .header {
-    width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .logo {
-    width: 50%;   /* 50% smaller as requested */
-    max-width: 300px;
+    width: 150px;   /* reduced ~50% */
     margin-bottom: 20px;
 }
 
-.stencil-wrapper {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
 .stencil-title {
-    width: 100%;
-    max-width: 800px;     /* hard cap */
-    max-height: 180px;    /* prevents billboard mode */
-    height: auto;
     display: block;
+    width: 100%;
+    max-width: 700px;
+    max-height: 150px;
+    height: auto;
     margin: 0 auto 30px auto;
 }
 
@@ -154,6 +146,7 @@ button:hover {
 
 
 }
+
 
 
 
