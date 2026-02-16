@@ -62,7 +62,7 @@
       "price": 75,
       "threshold": 2,
       "image": "https://i.imgur.com/p09CXKy.png",
-      "stock": 100
+      "stock": 99
     }
   ],
   "orders": [
@@ -249,7 +249,22 @@
       ],
       "total": 80,
       "timestamp": "2026-02-16T03:28:43.313Z"
+    },
+    {
+      "orderNumber": 1010,
+      "customer": "Krios",
+      "items": [
+        {
+          "id": "Flag#1",
+          "name": "250 Year American Wall Flag",
+          "price": 75,
+          "quantity": 1,
+          "size": null
+        }
+      ],
+      "total": 75,
+      "timestamp": "2026-02-16T03:49:00.709Z"
     }
   ],
-  "lastOrderNumber": 1009
+  "lastOrderNumber": 1010
 }
