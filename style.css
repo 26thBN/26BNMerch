@@ -67,4 +67,17 @@ button {
 
 button:hover {
     background: #00aaff;
+
+    #total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+    background: #1b1b1b;
+    padding: 8px 12px;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    display: inline-block;
 }
+
+}
+
