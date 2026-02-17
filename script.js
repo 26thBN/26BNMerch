@@ -114,6 +114,7 @@ async function submitOrder() {
 
     const callsign = document.getElementById("callsign").value.trim();
     const customerEmail = document.getElementById("customerEmail").value.trim();
+    const state = document.getElementById("state").value;
 
     if (!customerEmail) {
         alert("Email is required.");
@@ -125,13 +126,47 @@ async function submitOrder() {
         return;
     }
 
+    if (!state) {
+        alert("Please select your state.");
+        return;
+    }
+
     const orderData = {
         customer: callsign,
         customerEmail: customerEmail,
+        state: state,
         items: cart,
         total: total,
         timestamp: new Date().toISOString()
     };
+
+    // 🔐 START ENCRYPTION SEQUENCE
+    const overlay = document.getElementById("encryptionOverlay");
+    const terminal = document.getElementById("terminalText");
+    const progress = document.getElementById("progressFill");
+
+    overlay.style.display = "flex";
+    terminal.innerText = "";
+    progress.style.width = "0%";
+
+    const lines = [
+        "INITIALIZING SECURE TRANSMISSION...",
+        "ESTABLISHING ENCRYPTED CHANNEL...",
+        "HASHING ORDER PAYLOAD...",
+        "ENCRYPTING ORDER DATA...",
+        "VERIFYING CHECKSUM...",
+        "TRANSMITTING TO COMMAND..."
+    ];
+
+    for (let i = 0; i < lines.length; i++) {
+        terminal.innerText += lines[i] + "\n";
+        progress.style.width = ((i + 1) / lines.length * 100) + "%";
+        await new Promise(r => setTimeout(r, 400));
+    }
+
+    terminal.innerText += "\n🔐 ENCRYPTION COMPLETE\nORDER TRANSMITTED\n";
+
+    await new Promise(r => setTimeout(r, 800));
 
     try {
         await fetch(PROXY_URL, {
@@ -140,6 +175,8 @@ async function submitOrder() {
             headers: { "Content-Type": "text/plain" },
             body: JSON.stringify(orderData)
         });
+
+        overlay.style.display = "none";
 
         alert(
             "Preorder submitted successfully.\n\n" +
@@ -152,8 +189,12 @@ async function submitOrder() {
         loadProducts();
 
     } catch (error) {
+        overlay.style.display = "none";
         alert("There was an error submitting your order. Please try again.");
     }
 }
 
+}
+
 loadProducts();
+
