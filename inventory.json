@@ -19,7 +19,7 @@
       "price": 20,
       "threshold": 0,
       "image": "https://i.imgur.com/cg1nJ7e.png",
-      "stock": 0
+      "stock": -2
     },
     {
       "id": "shirt#1",
@@ -439,7 +439,22 @@
       ],
       "total": 80,
       "timestamp": "2026-02-17T22:51:21.679Z"
+    },
+    {
+      "orderNumber": 1022,
+      "customer": "Krios",
+      "items": [
+        {
+          "id": "Tumbler#1",
+          "name": "26th Battalion Tumbler",
+          "price": 20,
+          "quantity": 2,
+          "size": null
+        }
+      ],
+      "total": 40,
+      "timestamp": "2026-02-17T22:52:08.704Z"
     }
   ],
-  "lastOrderNumber": 1021
+  "lastOrderNumber": 1022
 }
