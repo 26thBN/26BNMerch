@@ -5,51 +5,69 @@ const PROXY_URL = "https://script.google.com/macros/s/AKfycbyEk3khZc36ezbMMTSVIB
 const INVENTORY_URL = "https://raw.githubusercontent.com/26thBN/26BNMerch/main/inventory.json";
 
 async function loadProducts() {
-    const response = await fetch(INVENTORY_URL);
-    const data = await response.json();
-    console.log(data);
-    console.log(data.items);
+    try {
 
-    const container = document.getElementById("products");
-    container.innerHTML = "";
+        const response = await fetch(INVENTORY_URL);
 
-    data.items.forEach(item => {
-
-        const div = document.createElement("div");
-        div.className = "product";
-
-        let sizeOptions = "";
-
-        if (item.sizes) {
-            Object.keys(item.sizes).forEach(size => {
-                sizeOptions += `
-                    <option value="${size}">
-                        ${size}
-                    </option>
-                `;
-            });
+        if (!response.ok) {
+            throw new Error("Inventory failed to load");
         }
 
-        div.innerHTML = `
-            <img src="${item.image}" />
-            <h3>${item.name}</h3>
-            <p>${item.description}</p>
-            <p>$${item.price}</p>
+        const data = await response.json();
 
-            ${item.sizes
-                ? `<select id="size-${item.id}">${sizeOptions}</select>`
-                : ""}
+        console.log(data);
+        console.log(data.items);
 
-            <br>
-            <input type="number" id="qty-${item.id}" value="1" min="1">
-            <br>
-            <button onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
-                Preorder
-            </button>
-        `;
+        if (!data.items || !Array.isArray(data.items)) {
+            throw new Error("Inventory format invalid");
+        }
 
-        container.appendChild(div);
-    });
+        const container = document.getElementById("products");
+        container.innerHTML = "";
+
+        data.items.forEach(item => {
+
+            const div = document.createElement("div");
+            div.className = "product";
+
+            let sizeOptions = "";
+
+            if (item.sizes) {
+                Object.keys(item.sizes).forEach(size => {
+                    sizeOptions += `
+                        <option value="${size}">
+                            ${size}
+                        </option>
+                    `;
+                });
+            }
+
+            div.innerHTML = `
+                <img src="${item.image}" />
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+                <p>$${item.price}</p>
+
+                ${item.sizes
+                    ? `<select id="size-${item.id}">${sizeOptions}</select>`
+                    : ""}
+
+                <br>
+                <input type="number" id="qty-${item.id}" value="1" min="1">
+                <br>
+                <button onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
+                    Preorder
+                </button>
+            `;
+
+            container.appendChild(div);
+        });
+
+    } catch (error) {
+        console.error("LOAD ERROR:", error);
+        document.getElementById("products").innerHTML =
+            "<p style='color:red'>Inventory failed to load. Please refresh.</p>";
+    }
 }
 
 function addToCart(id, name, price) {
@@ -143,7 +161,6 @@ async function submitOrder() {
         timestamp: new Date().toISOString()
     };
 
-    // 🔐 START ENCRYPTION SEQUENCE
     const overlay = document.getElementById("encryptionOverlay");
     const terminal = document.getElementById("terminalText");
     const progress = document.getElementById("progressFill");
@@ -198,7 +215,3 @@ async function submitOrder() {
 }
 
 loadProducts();
-
-
-
-
