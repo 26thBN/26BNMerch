@@ -54,7 +54,7 @@
       "price": 100000000,
       "threshold": 0,
       "image": "https://i.imgur.com/dsjlmPI.jpeg",
-      "stock": -23
+      "stock": -24
     },
     {
       "id": "hoodie",
@@ -409,7 +409,22 @@
       ],
       "total": 10,
       "timestamp": "2026-02-17T22:27:26.843Z"
+    },
+    {
+      "orderNumber": 1020,
+      "customer": "krios",
+      "items": [
+        {
+          "id": "WDCSticker#1",
+          "name": "WDC DECAL (Not For Sale)",
+          "price": 100000000,
+          "quantity": 1,
+          "size": null
+        }
+      ],
+      "total": 100000000,
+      "timestamp": "2026-02-17T22:30:45.618Z"
     }
   ],
-  "lastOrderNumber": 1019
+  "lastOrderNumber": 1020
 }
