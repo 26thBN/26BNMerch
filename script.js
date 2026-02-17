@@ -196,7 +196,13 @@ async function submitOrder() {
             body: JSON.stringify(orderData)
         });
 
-        overlay.style.display = "none";
+        // 🔥 BURN EFFECT ADDED
+        overlay.classList.add("burn-effect");
+
+        setTimeout(() => {
+            overlay.style.display = "none";
+            overlay.classList.remove("burn-effect");
+        }, 800);
 
         alert(
             "Preorder submitted successfully.\n\n" +
@@ -209,10 +215,16 @@ async function submitOrder() {
         loadProducts();
 
     } catch (error) {
-        overlay.style.display = "none";
+
+        overlay.classList.add("burn-effect");
+
+        setTimeout(() => {
+            overlay.style.display = "none";
+            overlay.classList.remove("burn-effect");
+        }, 800);
+
         alert("There was an error submitting your order. Please try again.");
     }
 }
 
 loadProducts();
-
