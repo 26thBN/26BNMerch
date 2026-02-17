@@ -181,7 +181,7 @@ async function submitOrder() {
         alert(
             "Preorder submitted successfully.\n\n" +
             "You will receive an email confirmation shortly.\n\n" +
-            "Payment due to Capt. Pope at FTX."
+            "Payment must be remitted to your group Capt. prior to receiving your order."
         );
 
         cart = [];
@@ -195,5 +195,6 @@ async function submitOrder() {
 }
 
 loadProducts();
+
 
 
