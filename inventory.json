@@ -1,77 +1,69 @@
 {
   "items": [
     {
-      "id": "hoodie",
-      "name": "Heavyweight Olive Drab Hoodie",
-      "description": "Heavyweight olive drab hoodie with distress American flag..",
-      "price": 40,
-      "threshold": 5,
-      "image": "https://i.imgur.com/QWCcIyl.png",
-      "sizes": {
-        "S": 1,
-        "M": 3,
-        "L": 7,
-        "XL": 10,
-        "2XL": 10,
-        "3XL": 4
-      },
-      "stock": 35
-    },
-    {
       "id": "Beanie#1",
       "name": "Battalion Beanie",
       "description": "Olive Green Beanie with 26th Battalion Insignia (One Size)",
       "price": 10,
-      "threshold": 5,
+      "threshold": 0,
       "image": "https://i.imgur.com/jcRiryv.png",
       "sizes": {
-        "OSFA": 28
+        "OSFA": 0
       },
-      "stock": 28
+      "stock": 0
     },
     {
       "id": "Tumbler#1",
       "name": "26th Battalion Tumbler",
       "description": "Drink in style with this thermal insulated Tumbler featuring the Battalion Insignia",
       "price": 20,
-      "threshold": 5,
+      "threshold": 0,
       "image": "https://i.imgur.com/cg1nJ7e.png",
-      "stock": 15
+      "stock": 0
     },
     {
       "id": "shirt#1",
       "name": "Green 26 BN T",
       "description": "100% cotton battalion tee.",
       "price": 15,
-      "threshold": 10,
+      "threshold": 0,
       "image": "https://i.imgur.com/E8IvDlp.png",
       "sizes": {
-        "S": -3,
-        "M": -3,
-        "L": 10,
-        "XL": 9,
-        "2XL": 8,
-        "3XL": 5
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "2XL": 0,
+        "3XL": 0
       },
-      "stock": 26
+      "stock": 0
     },
     {
       "id": "Flag#1",
       "name": "250 Year American Wall Flag",
       "description": "Celebrate 250 of World Dominance!  American Made High Quality Polyester",
       "price": 75,
-      "threshold": 2,
+      "threshold": 0,
       "image": "https://i.imgur.com/p09CXKy.png",
-      "stock": 99
+      "stock": 0
     },
     {
       "id": "WDCSticker#1",
       "name": "WDC DECAL (Not For Sale)",
       "description": "Comprised of Kevlar, these decals will last until Rapture",
       "price": 100000000,
-      "threshold": 1,
+      "threshold": 0,
       "image": "https://i.imgur.com/dsjlmPI.jpeg",
-      "stock": 999
+      "stock": 0
+    },
+    {
+      "id": "hoodie",
+      "name": "Heavyweight Olive Drab Hoodie",
+      "description": "Heavyweight olive drab hoodie with distress American flag..",
+      "price": 40,
+      "threshold": 0,
+      "image": "https://i.imgur.com/QWCcIyl.png",
+      "stock": 0
     }
   ],
   "orders": [
