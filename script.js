@@ -194,7 +194,6 @@ async function submitOrder() {
     }
 }
 
-}
-
 loadProducts();
+
 
