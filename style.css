@@ -55,7 +55,6 @@ body {
     border-radius: 8px;
     position: relative;
 
-    /* NEW — forces equal clean layout */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -75,12 +74,10 @@ body {
     margin: 5px 0;
 }
 
-/* Make description area consistent height */
 .product p:nth-of-type(1) {
     min-height: 48px;
 }
 
-/* Controls always align at bottom */
 .product select,
 .product input,
 .product button {
@@ -99,7 +96,6 @@ body {
     text-align: center;
 }
 
-/* Cleaner spacing before controls */
 .product button {
     margin-top: 12px;
 }
@@ -186,22 +182,30 @@ button:hover {
     #products {
         grid-template-columns: 1fr;
     }
+}
 
-    .encryption-overlay {
-    position: fixed;
-    inset: 0;
-    background: #0b0f0b;
+
+/* ========================= */
+/* ENCRYPTION OVERLAY (UPDATED) */
+/* ========================= */
+
+.encryption-overlay {
+    position: absolute;          /* changed from fixed */
+    inset: 0;                    /* fill preorder container */
+    background: rgba(0, 0, 0, 0.95);
     color: #39ff14;
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 999;
     font-family: "Courier New", monospace;
+    border-radius: 8px;
 }
 
 .terminal-box {
     width: 600px;
     max-width: 90%;
+    text-align: center;
 }
 
 #terminalText {
@@ -223,6 +227,3 @@ button:hover {
     background: #39ff14;
     transition: width 0.1s linear;
 }
-
-}
-
