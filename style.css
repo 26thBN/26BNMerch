@@ -186,20 +186,22 @@ button:hover {
 
 
 /* ========================= */
-/* ENCRYPTION OVERLAY (UPDATED) */
+/* ENCRYPTION OVERLAY (FIXED) */
 /* ========================= */
 
 .encryption-overlay {
-    position: absolute;          /* changed from fixed */
-    inset: 0;                    /* fill preorder container */
+    position: fixed;        /* CHANGED */
+    top: 0;                 /* ADDED */
+    left: 0;                /* ADDED */
+    width: 100%;            /* ADDED */
+    height: 100%;           /* ADDED */
     background: rgba(0, 0, 0, 0.95);
     color: #39ff14;
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 9999;          /* INCREASED */
     font-family: "Courier New", monospace;
-    border-radius: 8px;
 }
 
 .terminal-box {
