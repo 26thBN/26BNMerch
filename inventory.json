@@ -8,9 +8,9 @@
       "threshold": 0,
       "image": "https://i.imgur.com/jcRiryv.png",
       "sizes": {
-        "OSFA": 0
+        "OSFA": -1
       },
-      "stock": 0
+      "stock": -1
     },
     {
       "id": "Tumbler#1",
@@ -394,7 +394,22 @@
       ],
       "total": 100000000,
       "timestamp": "2026-02-17T22:26:49.401Z"
+    },
+    {
+      "orderNumber": 1019,
+      "customer": "Krios",
+      "items": [
+        {
+          "id": "Beanie#1",
+          "name": "Battalion Beanie",
+          "price": 10,
+          "quantity": 1,
+          "size": "OSFA"
+        }
+      ],
+      "total": 10,
+      "timestamp": "2026-02-17T22:27:26.843Z"
     }
   ],
-  "lastOrderNumber": 1018
+  "lastOrderNumber": 1019
 }
