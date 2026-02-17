@@ -64,7 +64,7 @@
       "threshold": 0,
       "image": "https://i.imgur.com/QWCcIyl.png",
       "sizes": {
-        "S": -3,
+        "S": -4,
         "M": 0,
         "L": 0,
         "XL": 0,
@@ -72,7 +72,7 @@
         "3XL": 0
       },
       "Preorders": 0,
-      "stock": -2
+      "stock": -3
     }
   ],
   "orders": [
@@ -454,7 +454,22 @@
       ],
       "total": 40,
       "timestamp": "2026-02-17T22:52:08.704Z"
+    },
+    {
+      "orderNumber": 1023,
+      "customer": "Krios Test Order",
+      "items": [
+        {
+          "id": "hoodie",
+          "name": "Heavyweight Olive Drab Hoodie",
+          "price": 40,
+          "quantity": 1,
+          "size": "S"
+        }
+      ],
+      "total": 40,
+      "timestamp": "2026-02-17T23:20:01.835Z"
     }
   ],
-  "lastOrderNumber": 1022
+  "lastOrderNumber": 1023
 }
