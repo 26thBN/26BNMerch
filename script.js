@@ -7,6 +7,9 @@ const INVENTORY_URL = "https://raw.githubusercontent.com/26thBN/26BNMerch/main/i
 async function loadProducts() {
     const response = await fetch(INVENTORY_URL);
     const data = await response.json();
+    console.log(data);
+    console.log(data.items);
+
     const container = document.getElementById("products");
     container.innerHTML = "";
 
@@ -195,6 +198,7 @@ async function submitOrder() {
 }
 
 loadProducts();
+
 
 
 
