@@ -16,27 +16,15 @@ async function loadProducts() {
         div.className = "product";
 
         let sizeOptions = "";
-        let allSoldOut = false;
 
         if (item.sizes) {
-            let soldCount = 0;
-
             Object.keys(item.sizes).forEach(size => {
-                const stock = item.sizes[size];
-                if (stock === 0) soldCount++;
-
                 sizeOptions += `
-                    <option value="${size}" ${stock === 0 ? "disabled" : ""}>
-                        ${size} ${stock === 0 ? "(Sold Out)" : ""}
+                    <option value="${size}">
+                        ${size}
                     </option>
                 `;
             });
-
-            if (soldCount === Object.keys(item.sizes).length) {
-                allSoldOut = true;
-            }
-        } else {
-            if (item.stock === 0) allSoldOut = true;
         }
 
         div.innerHTML = `
@@ -45,10 +33,6 @@ async function loadProducts() {
             <p>${item.description}</p>
             <p>$${item.price}</p>
 
-            ${item.stock <= item.threshold && item.stock > 0
-                ? `<div class="low-stock">⚠ LOW STOCK</div>`
-                : ""}
-
             ${item.sizes
                 ? `<select id="size-${item.id}">${sizeOptions}</select>`
                 : ""}
@@ -56,18 +40,10 @@ async function loadProducts() {
             <br>
             <input type="number" id="qty-${item.id}" value="1" min="1">
             <br>
-            <button ${allSoldOut ? "disabled" : ""}
-                onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
-                ${allSoldOut ? "Sold Out" : "Add to Cart"}
+            <button onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
+                Preorder
             </button>
         `;
-
-        if (allSoldOut) {
-            const overlay = document.createElement("div");
-            overlay.className = "sold-overlay";
-            overlay.innerText = "SOLD OUT";
-            div.appendChild(overlay);
-        }
 
         container.appendChild(div);
     });
@@ -137,39 +113,36 @@ async function submitOrder() {
     }
 
     const callsign = document.getElementById("callsign").value.trim();
-const customerEmail = document.getElementById("customerEmail").value.trim();
+    const customerEmail = document.getElementById("customerEmail").value.trim();
 
-if (!customerEmail) {
-    alert("Email is required.");
-    return;
-}
+    if (!customerEmail) {
+        alert("Email is required.");
+        return;
+    }
 
     if (!callsign) {
         alert("Please enter your callsign.");
         return;
     }
 
-   
-
-const orderData = {
-    customer: callsign,
-    customerEmail: customerEmail,
-    items: cart,
-    total: total,
-    timestamp: new Date().toISOString()
-};
-
+    const orderData = {
+        customer: callsign,
+        customerEmail: customerEmail,
+        items: cart,
+        total: total,
+        timestamp: new Date().toISOString()
+    };
 
     try {
         await fetch(PROXY_URL, {
             method: "POST",
             mode: "no-cors",
-            headers: { "Content-Type": "text/plain" }, // ✅ changed
+            headers: { "Content-Type": "text/plain" },
             body: JSON.stringify(orderData)
         });
 
         alert(
-            "Order submitted successfully.\n\n" +
+            "Preorder submitted successfully.\n\n" +
             "You will receive an email confirmation shortly.\n\n" +
             "Payment due to Capt. Pope at FTX."
         );
@@ -184,6 +157,3 @@ const orderData = {
 }
 
 loadProducts();
-
-
-
