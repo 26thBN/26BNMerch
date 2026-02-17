@@ -71,7 +71,7 @@
       "price": 100000000,
       "threshold": 1,
       "image": "https://i.imgur.com/dsjlmPI.jpeg",
-      "stock": 1000
+      "stock": 999
     }
   ],
   "orders": [
@@ -273,7 +273,22 @@
       ],
       "total": 75,
       "timestamp": "2026-02-16T03:49:00.709Z"
+    },
+    {
+      "orderNumber": 1011,
+      "customer": "Boots Tickler",
+      "items": [
+        {
+          "id": "WDCSticker#1",
+          "name": "WDC DECAL (Not For Sale)",
+          "price": 100000000,
+          "quantity": 1,
+          "size": null
+        }
+      ],
+      "total": 100000000,
+      "timestamp": "2026-02-17T03:22:28.836Z"
     }
   ],
-  "lastOrderNumber": 1010
+  "lastOrderNumber": 1011
 }
