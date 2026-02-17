@@ -63,7 +63,15 @@
       "price": 40,
       "threshold": 0,
       "image": "https://i.imgur.com/QWCcIyl.png",
-      "stock": 0
+      "sizes": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "2XL": 0,
+        "3XL": 0
+      },
+      "Preorders": 0
     }
   ],
   "orders": [
