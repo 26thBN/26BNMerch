@@ -217,11 +217,21 @@ async function submitOrder() {
         progress.style.display = "none";
 
         setTimeout(() => {
-            overlay.style.display = "none";
-            cart = [];
-            updateCart();
-            loadProducts();
-        }, 4500);
+
+    overlay.classList.add("overlay-fade-out");
+
+    setTimeout(() => {
+        overlay.style.display = "none";
+        overlay.classList.remove("overlay-fade-out");
+
+        cart = [];
+        updateCart();
+        loadProducts();
+
+    }, 500);
+
+}, 4000);
+
 
     } catch (error) {
         overlay.style.display = "none";
@@ -230,4 +240,5 @@ async function submitOrder() {
 }
 
 loadProducts();
+
 
