@@ -221,7 +221,7 @@ async function submitOrder() {
             cart = [];
             updateCart();
             loadProducts();
-        }, 2000);
+        }, 4500);
 
     } catch (error) {
         overlay.style.display = "none";
@@ -230,3 +230,4 @@ async function submitOrder() {
 }
 
 loadProducts();
+
