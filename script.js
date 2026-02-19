@@ -56,7 +56,6 @@ async function loadProducts() {
                 <input type="number" id="qty-${item.id}" value="1" min="1">
                 <br>
                 <button id="btn-${item.id}" onclick="addToCart('${item.id}', '${item.name}', ${item.price}, this)">
-
                     Preorder
                 </button>
             `;
@@ -87,9 +86,8 @@ function addToCart(id, name, price, buttonEl) {
 
     updateCart();
 
-    // --- Visual Feedback ---
+    // Visual feedback
     if (buttonEl) {
-
         const originalText = buttonEl.innerText;
 
         buttonEl.innerText = "✓ Added";
@@ -102,12 +100,6 @@ function addToCart(id, name, price, buttonEl) {
             buttonEl.style.color = "";
         }, 1000);
     }
-}
-button:active {
-    transform: scale(0.97);
-}
-
-    updateCart();
 }
 
 function updateCart() {
@@ -232,12 +224,9 @@ async function submitOrder() {
         }, 2000);
 
     } catch (error) {
-
         overlay.style.display = "none";
         alert("There was an error submitting your order. Please try again.");
     }
 }
 
 loadProducts();
-
-
