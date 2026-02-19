@@ -71,7 +71,8 @@ async function loadProducts() {
     }
 }
 
-function addToCart(id, name, price) {
+function addToCart(id, name, price, buttonEl) {
+
     const qty = parseInt(document.getElementById(`qty-${id}`).value);
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
@@ -83,6 +84,28 @@ function addToCart(id, name, price) {
     } else {
         cart.push({ id, name, price, quantity: qty, size });
     }
+
+    updateCart();
+
+    // --- Visual Feedback ---
+    if (buttonEl) {
+
+        const originalText = buttonEl.innerText;
+
+        buttonEl.innerText = "✓ Added";
+        buttonEl.style.backgroundColor = "#00ff00";
+        buttonEl.style.color = "black";
+
+        setTimeout(() => {
+            buttonEl.innerText = originalText;
+            buttonEl.style.backgroundColor = "";
+            buttonEl.style.color = "";
+        }, 1000);
+    }
+}
+button:active {
+    transform: scale(0.97);
+}
 
     updateCart();
 }
@@ -216,4 +239,5 @@ async function submitOrder() {
 }
 
 loadProducts();
+
 
