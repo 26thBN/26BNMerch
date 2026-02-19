@@ -773,8 +773,18 @@
       "size": null,
       "qty": 1,
       "timestamp": "2026-02-19T16:50:20.090Z"
+    },
+    {
+      "preorderNumber": 1023,
+      "state": "FL",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "WDCSticker#1",
+      "item": "WDC DECAL (Not For Sale)",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-02-19T16:53:44.810Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1022
+  "lastPreorderNumber": 1023
 }
