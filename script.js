@@ -55,7 +55,8 @@ async function loadProducts() {
                 <br>
                 <input type="number" id="qty-${item.id}" value="1" min="1">
                 <br>
-                <button onclick="addToCart('${item.id}', '${item.name}', ${item.price})">
+                <button id="btn-${item.id}" onclick="addToCart('${item.id}', '${item.name}', ${item.price}, this)">
+
                     Preorder
                 </button>
             `;
@@ -215,3 +216,4 @@ async function submitOrder() {
 }
 
 loadProducts();
+
