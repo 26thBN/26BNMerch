@@ -1,13 +1,8 @@
-/* ========================= */
-/* HEADER STYLING */
-/* ========================= */
-
 .header {
     text-align: center;
     padding-top: 30px;
 }
 
-/* Main round logo */
 .logo {
     width: 140px;
     height: auto;
@@ -15,17 +10,11 @@
     margin: 0 auto 20px auto;
 }
 
-/* Merch title image */
 .stencil-title {
     height: auto;
     display: block;
     margin: 0 auto 40px auto;
 }
-
-
-/* ========================= */
-/* BODY */
-/* ========================= */
 
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -44,17 +33,10 @@ body {
     margin: 0 auto;
 }
 
-
-/* ========================= */
-/* PRODUCTS */
-/* ========================= */
-
 .product {
     background: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-    position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,18 +48,6 @@ body {
     margin: 0 auto 15px auto;
 }
 
-.product h3 {
-    margin: 10px 0;
-}
-
-.product p {
-    margin: 5px 0;
-}
-
-.product p:nth-of-type(1) {
-    min-height: 48px;
-}
-
 .product select,
 .product input,
 .product button {
@@ -85,54 +55,6 @@ body {
     max-width: 220px;
     margin: 8px auto;
     display: block;
-}
-
-.product input[type="number"] {
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #444;
-    background: #2a2a2a;
-    color: white;
-    text-align: center;
-}
-
-.product button {
-    margin-top: 12px;
-}
-
-.low-stock {
-    background: #cc8800;
-    padding: 5px;
-    font-size: 12px;
-    margin-top: 8px;
-    border-radius: 4px;
-}
-
-.sold-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: red;
-    border-radius: 8px;
-}
-
-
-/* ========================= */
-/* BUTTONS */
-/* ========================= */
-
-select:disabled,
-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
 }
 
 button {
@@ -149,26 +71,9 @@ button:hover {
     background: #00aaff;
 }
 
-
-/* ========================= */
-/* TOTAL DISPLAY */
-/* ========================= */
-
-#total {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffc107;
-    background: #1b1b1b;
-    padding: 8px 12px;
-    border: 1px solid #ffc107;
-    border-radius: 4px;
-    display: inline-block;
+button:active {
+    transform: scale(0.97);
 }
-
-
-/* ========================= */
-/* PRODUCT GRID */
-/* ========================= */
 
 #products {
     display: grid;
@@ -177,137 +82,8 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Mobile fallback */
 @media (max-width: 700px) {
     #products {
         grid-template-columns: 1fr;
     }
 }
-
-
-/* ========================= */
-/* ENCRYPTION OVERLAY */
-/* ========================= */
-
-.encryption-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: dvh;
-    background: rgba(0, 0, 0, 0.95);
-    color: #39ff14;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    font-family: "Courier New", monospace;
-
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.terminal-box {
-    width: 600px;
-    max-width: 90%;
-    text-align: center;
-}
-
-#terminalText {
-    font-size: 16px;
-    min-height: 120px;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 20px;
-    background: #1c1c1c;
-    margin-top: 15px;
-    border: 1px solid #39ff14;
-}
-
-#progressFill {
-    width: 0%;
-    height: 100%;
-    background: #39ff14;
-    transition: width 0.1s linear;
-}
-
-
-button:active {
-    transform: scale(0.97);
-}
-
-}
-
-@media (max-width: 700px) {
-    .terminal-box {
-        transform: translateY(10vh);
-    }
-}
-@media (max-width: 700px) {
-
-    #products {
-        grid-template-columns: 1fr;
-    }
-
-    body {
-        padding: 15px;
-    }
-
-    #app {
-        max-width: 100%;
-    }
-
-    input,
-    select,
-    button {
-        font-size: 18px;
-    }
-
-    .product input,
-    .product select,
-    .product button {
-        max-width: 100%;
-    }
-
-    #terminalText {
-        font-size: 14px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    label {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 700px) {
-
-    #preorder-container {
-        position: relative;
-    }
-
-    .encryption-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
