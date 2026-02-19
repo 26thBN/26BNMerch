@@ -194,7 +194,7 @@ button:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: dvh%;
+    height: dvh;
     background: rgba(0, 0, 0, 0.95);
     color: #39ff14;
     display: none;
@@ -269,6 +269,7 @@ button:active {
         transform: translateY(10vh);
     }
 }
+
 
 
 
