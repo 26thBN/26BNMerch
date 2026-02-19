@@ -176,75 +176,27 @@ async function submitOrder() {
         timestamp: new Date().toISOString()
     };
 
-    const overlay = document.getElementById("encryptionOverlay");
-    const terminal = document.getElementById("terminalText");
-    const progress = document.getElementById("progressFill");
-
-    // FADE IN FIX
-    window.scrollTo({ top: 0, behavior: "0, 0" });
-    overlay.style.display = "flex";
-    overlay.style.opacity = "0";
-    setTimeout(() => {
-        overlay.style.opacity = "1";
-    }, 10);
-
-    terminal.innerText = "";
-    progress.style.width = "0%";
-    progress.style.display = "block";
-
-    const lines = [
-        "INITIALIZING SECURE TRANSMISSION...",
-        "ESTABLISHING ENCRYPTED CHANNEL...",
-        "HASHING ORDER PAYLOAD...",
-        "ENCRYPTING ORDER DATA...",
-        "VERIFYING CHECKSUM...",
-        "TRANSMITTING TO COMMAND..."
-    ];
-
-    for (let i = 0; i < lines.length; i++) {
-        terminal.innerText += lines[i] + "\n";
-        progress.style.width = ((i + 1) / lines.length * 100) + "%";
-        await new Promise(r => setTimeout(r, 400));
-    }
-
     try {
+
         await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
             body: JSON.stringify(orderData)
         });
 
-        terminal.innerText =
-            "🔐 ENCRYPTION COMPLETE\n\n" +
+        alert(
             "Preorder Submitted Successfully.\n\n" +
             "You will receive an email confirmation shortly.\n\n" +
-            "Payment must be remitted to your group Capt. prior to receiving your order.";
+            "Payment must be remitted to your group Capt. prior to receiving your order."
+        );
 
-        progress.style.display = "none";
-
-        // FADE OUT FIX
-        setTimeout(() => {
-
-            overlay.style.opacity = "0";
-
-            setTimeout(() => {
-                overlay.style.display = "none";
-                overlay.style.opacity = "0";
-
-                cart = [];
-                updateCart();
-                loadProducts();
-
-            }, 500);
-
-        }, 4000);
+        cart = [];
+        updateCart();
+        loadProducts();
 
     } catch (error) {
-        overlay.style.display = "none";
         alert("There was an error submitting your order. Please try again.");
     }
 }
 
 loadProducts();
-
-
