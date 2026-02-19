@@ -219,3 +219,8 @@ async function submitOrder() {
         alert("There was an error submitting your order. Please try again.");
     }
 }
+}
+}
+
+loadProducts();
+
