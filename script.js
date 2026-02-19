@@ -201,18 +201,21 @@ You will receive an email confirmation shortly.
 
 Payment must be remitted to your group Capt. prior to receiving your order.
 
-<button id="overlayOkBtn" style="
-    margin-top:20px;
-    padding:10px 25px;
-    background:#00ff00;
-    border:none;
-    color:black;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:4px;
-">
-    OK
-</button>
+<div style="text-align:center;">
+    <button id="overlayOkBtn" style="
+        padding:8px 35px;
+        background:#00ff00;
+        border:none;
+        color:black;
+        font-weight:bold;
+        cursor:pointer;
+        border-radius:4px;
+        display:inline-block;
+    ">
+        OK
+    </button>
+</div>
+
 `;
 
         progress.style.width = "100%";
@@ -232,3 +235,4 @@ Payment must be remitted to your group Capt. prior to receiving your order.
 }
 
 loadProducts();
+
