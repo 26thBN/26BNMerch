@@ -683,8 +683,18 @@
       "size": null,
       "qty": 1,
       "timestamp": "2026-02-19T15:55:24.104Z"
+    },
+    {
+      "preorderNumber": 1014,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "shirt#1",
+      "item": "Green 26 BN T",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-02-19T16:06:05.104Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1013
+  "lastPreorderNumber": 1014
 }
