@@ -603,8 +603,18 @@
       "size": "OSFA",
       "qty": 2,
       "timestamp": "2026-02-19T13:29:22.419Z"
+    },
+    {
+      "preorderNumber": 1006,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "WDCSticker#1",
+      "item": "WDC DECAL (Not For Sale)",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-02-19T13:39:59.297Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1005
+  "lastPreorderNumber": 1006
 }
