@@ -261,4 +261,11 @@ button:hover {
 button:active {
     transform: scale(0.97);
 }
+@media (max-width: 700px) {
+    .encryption-overlay {
+        align-items: flex-start;
+        padding-top: 120px;
+    }
+}
+
 
