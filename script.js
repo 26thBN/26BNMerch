@@ -194,37 +194,44 @@ async function submitOrder() {
 
         // Clean Success Layout
         terminal.innerHTML = `
-            <div style="max-width:500px; margin:0 auto; text-align:center;">
-                <div style="font-size:16px; font-weight:bold; margin-bottom:15px;">
-                    🔐 ENCRYPTION COMPLETE
-                </div>
+            terminal.innerHTML = `
+<div style="
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:12px;
+    max-width:500px;
+    margin:0 auto;
+">
+    <div style="font-weight:bold; font-size:16px;">
+        🔐 ENCRYPTION COMPLETE
+    </div>
 
-                <div style="margin-bottom:10px;">
-                    Preorder Submitted Successfully.
-                </div>
+    <div>Preorder Submitted Successfully.</div>
 
-                <div style="margin-bottom:10px;">
-                    You will receive an email confirmation shortly.
-                </div>
+    <div>You will receive an email confirmation shortly.</div>
 
-                <div style="margin-bottom:25px;">
-                    Payment must be remitted to your group Capt. prior to receiving your order.
-                </div>
+    <div style="font-size:13px;">
+        Payment must be remitted to your group Capt. prior to receiving your order.
+    </div>
 
-                <button id="overlayOkBtn" style="
-                    display:inline-block;
-                    padding:8px 26px;
-                    background:#00ff00;
-                    color:black;
-                    font-weight:bold;
-                    border:none;
-                    border-radius:4px;
-                    cursor:pointer;
-                ">
-                    OK
-                </button>
-            </div>
-        `;
+    <button id="overlayOkBtn" style="
+        padding:8px 22px;
+        background:#00ff00;
+        color:black;
+        font-weight:bold;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+        min-width:90px;
+    ">
+        OK
+    </button>
+</div>
+`;
+
 
         progress.style.display = "none";
 
@@ -243,3 +250,4 @@ async function submitOrder() {
 }
 
 loadProducts();
+
