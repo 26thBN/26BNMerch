@@ -181,7 +181,7 @@ async function submitOrder() {
     const progress = document.getElementById("progressFill");
 
     // FADE IN FIX
-    window.scrollTo({ top: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, behavior: "0, 0" });
     overlay.style.display = "flex";
     overlay.style.opacity = "0";
     setTimeout(() => {
@@ -246,4 +246,5 @@ async function submitOrder() {
 }
 
 loadProducts();
+
 
