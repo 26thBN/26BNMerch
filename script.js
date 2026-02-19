@@ -191,7 +191,6 @@ async function submitOrder() {
     try {
         await fetch(PROXY_URL, {
             method: "POST",
-            mode: "no-cors",
             headers: { "Content-Type": "text/plain" },
             body: JSON.stringify(orderData)
         });
@@ -228,3 +227,4 @@ async function submitOrder() {
 }
 
 loadProducts();
+
