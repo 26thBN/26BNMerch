@@ -192,20 +192,10 @@ async function submitOrder() {
             body: JSON.stringify(orderData)
         });
 
-        // Clean Success Layout
+        // SUCCESS SCREEN (FIXED)
         terminal.innerHTML = `
-            terminal.innerHTML = `
-<div style="
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    gap:12px;
-    max-width:500px;
-    margin:0 auto;
-">
-    <div style="font-weight:bold; font-size:16px;">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;max-width:500px;margin:0 auto;">
+    <div style="font-weight:bold;font-size:16px;">
         🔐 ENCRYPTION COMPLETE
     </div>
 
@@ -217,21 +207,11 @@ async function submitOrder() {
         Payment must be remitted to your group Capt. prior to receiving your order.
     </div>
 
-    <button id="overlayOkBtn" style="
-        padding:8px 22px;
-        background:#00ff00;
-        color:black;
-        font-weight:bold;
-        border:none;
-        border-radius:4px;
-        cursor:pointer;
-        min-width:90px;
-    ">
+    <button id="overlayOkBtn" style="padding:8px 22px;background:#00ff00;color:black;font-weight:bold;border:none;border-radius:4px;cursor:pointer;min-width:90px;">
         OK
     </button>
 </div>
 `;
-
 
         progress.style.display = "none";
 
@@ -250,4 +230,3 @@ async function submitOrder() {
 }
 
 loadProducts();
-
