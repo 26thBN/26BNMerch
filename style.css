@@ -284,6 +284,21 @@ button:active {
     }
 }
 
+@media (max-width: 700px) {
+
+    #preorderSection {
+        position: relative;
+    }
+
+    .encryption-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+}
+
 
 
 
