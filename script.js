@@ -86,7 +86,6 @@ function addToCart(id, name, price, buttonEl) {
 
     updateCart();
 
-    // Visual feedback
     if (buttonEl) {
         const originalText = buttonEl.innerText;
 
@@ -181,7 +180,13 @@ async function submitOrder() {
     const terminal = document.getElementById("terminalText");
     const progress = document.getElementById("progressFill");
 
+    // FADE IN FIX
     overlay.style.display = "flex";
+    overlay.style.opacity = "0";
+    setTimeout(() => {
+        overlay.style.opacity = "1";
+    }, 10);
+
     terminal.innerText = "";
     progress.style.width = "0%";
     progress.style.display = "block";
@@ -216,22 +221,22 @@ async function submitOrder() {
 
         progress.style.display = "none";
 
+        // FADE OUT FIX
         setTimeout(() => {
 
-    overlay.classList.add("overlay-fade-out");
+            overlay.style.opacity = "0";
 
-    setTimeout(() => {
-        overlay.style.display = "none";
-        overlay.classList.remove("overlay-fade-out");
+            setTimeout(() => {
+                overlay.style.display = "none";
+                overlay.style.opacity = "0";
 
-        cart = [];
-        updateCart();
-        loadProducts();
+                cart = [];
+                updateCart();
+                loadProducts();
 
-    }, 500);
+            }, 500);
 
-}, 4000);
-
+        }, 4000);
 
     } catch (error) {
         overlay.style.display = "none";
@@ -240,5 +245,3 @@ async function submitOrder() {
 }
 
 loadProducts();
-
-
