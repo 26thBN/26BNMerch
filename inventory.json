@@ -783,8 +783,18 @@
       "size": null,
       "qty": 1,
       "timestamp": "2026-02-19T16:53:44.810Z"
+    },
+    {
+      "preorderNumber": 1024,
+      "state": "KY",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "Beanie#1",
+      "item": "Battalion Beanie",
+      "size": "OSFA",
+      "qty": 1,
+      "timestamp": "2026-02-19T17:06:30.662Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1023
+  "lastPreorderNumber": 1024
 }
