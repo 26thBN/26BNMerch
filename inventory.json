@@ -583,8 +583,18 @@
       "size": null,
       "qty": 1,
       "timestamp": "2026-02-19T13:05:07.585Z"
+    },
+    {
+      "preorderNumber": 1004,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "Flag#1",
+      "item": "250 Year American Wall Flag",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-02-19T13:16:35.251Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1003
+  "lastPreorderNumber": 1004
 }
