@@ -823,8 +823,18 @@
       "size": "S",
       "qty": 1,
       "timestamp": "2026-02-19T17:28:28.796Z"
+    },
+    {
+      "preorderNumber": 1028,
+      "state": "MI",
+      "callsign": "WildTurkey",
+      "id": "WDCSticker#1",
+      "item": "WDC DECAL (Not For Sale)",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-02-19T17:29:12.461Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1027
+  "lastPreorderNumber": 1028
 }
