@@ -743,8 +743,18 @@
       "size": null,
       "qty": 1,
       "timestamp": "2026-02-19T16:19:13.525Z"
+    },
+    {
+      "preorderNumber": 1020,
+      "state": "ME",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "Tumbler#1",
+      "item": "26th Battalion Tumbler",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-02-19T16:27:16.161Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1019
+  "lastPreorderNumber": 1020
 }
