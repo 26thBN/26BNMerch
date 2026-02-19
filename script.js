@@ -184,10 +184,6 @@ async function submitOrder() {
         await new Promise(r => setTimeout(r, 400));
     }
 
-    terminal.innerText += "\n🔐 ENCRYPTION COMPLETE\nORDER TRANSMITTED\n";
-
-    await new Promise(r => setTimeout(r, 800));
-
     try {
         await fetch(PROXY_URL, {
             method: "POST",
@@ -195,33 +191,44 @@ async function submitOrder() {
             body: JSON.stringify(orderData)
         });
 
-        // 🔥 BURN EFFECT ADDED
-        overlay.classList.add("burn-effect");
+        // Unified Success State Inside Encryption Visual
+        terminal.innerHTML = `
+🔐 ENCRYPTION COMPLETE
 
-        setTimeout(() => {
+Preorder Submitted Successfully.
+
+You will receive an email confirmation shortly.
+
+Payment must be remitted to your group Capt. prior to receiving your order.
+
+<button id="overlayOkBtn" style="
+    margin-top:20px;
+    padding:10px 25px;
+    background:#00ff00;
+    border:none;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+">
+    OK
+</button>
+`;
+
+        progress.style.width = "100%";
+
+        document.getElementById("overlayOkBtn").addEventListener("click", () => {
             overlay.style.display = "none";
-            overlay.classList.remove("burn-effect");
-        }, 800);
-
-        );
-
-        cart = [];
-        updateCart();
-        loadProducts();
+            cart = [];
+            updateCart();
+            loadProducts();
+        });
 
     } catch (error) {
 
-        overlay.classList.add("burn-effect");
-
-        setTimeout(() => {
-            overlay.style.display = "none";
-            overlay.classList.remove("burn-effect");
-        }, 800);
-
+        overlay.style.display = "none";
         alert("There was an error submitting your order. Please try again.");
     }
 }
 
 loadProducts();
-
-
