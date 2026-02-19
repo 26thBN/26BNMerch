@@ -633,8 +633,18 @@
       "size": null,
       "qty": 1,
       "timestamp": "2026-02-19T14:55:22.763Z"
+    },
+    {
+      "preorderNumber": 1009,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "hoodie",
+      "item": "Heavyweight Olive Drab Hoodie",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-02-19T15:29:32.560Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1008
+  "lastPreorderNumber": 1009
 }
