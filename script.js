@@ -203,10 +203,6 @@ async function submitOrder() {
             overlay.classList.remove("burn-effect");
         }, 800);
 
-        alert(
-            "Preorder submitted successfully.\n\n" +
-            "You will receive an email confirmation shortly.\n\n" +
-            "Payment must be remitted to your group Capt. prior to receiving your order."
         );
 
         cart = [];
@@ -227,4 +223,5 @@ async function submitOrder() {
 }
 
 loadProducts();
+
 
