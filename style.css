@@ -202,6 +202,9 @@ button:hover {
     align-items: center;
     z-index: 9999;
     font-family: "Courier New", monospace;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .terminal-box {
@@ -258,3 +261,4 @@ button:hover {
 button:active {
     transform: scale(0.97);
 }
+
