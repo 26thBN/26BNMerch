@@ -168,6 +168,7 @@ async function submitOrder() {
     overlay.style.display = "flex";
     terminal.innerText = "";
     progress.style.width = "0%";
+    progress.style.display = "block";
 
     const lines = [
         "INITIALIZING SECURE TRANSMISSION...",
@@ -191,36 +192,41 @@ async function submitOrder() {
             body: JSON.stringify(orderData)
         });
 
-        // Unified Success State Inside Encryption Visual
+        // Clean Success Layout
         terminal.innerHTML = `
-🔐 ENCRYPTION COMPLETE
+            <div style="max-width:500px; margin:0 auto; text-align:center;">
+                <div style="font-size:16px; font-weight:bold; margin-bottom:15px;">
+                    🔐 ENCRYPTION COMPLETE
+                </div>
 
-Preorder Submitted Successfully.
+                <div style="margin-bottom:10px;">
+                    Preorder Submitted Successfully.
+                </div>
 
-You will receive an email confirmation shortly.
+                <div style="margin-bottom:10px;">
+                    You will receive an email confirmation shortly.
+                </div>
 
-Payment must be remitted to your group Capt. prior to receiving your order.
+                <div style="margin-bottom:25px;">
+                    Payment must be remitted to your group Capt. prior to receiving your order.
+                </div>
 
-<div style="text-align:center; margin-top:15px;">
-    <button id="overlayOkBtn" style="
-        all: unset;
-        display: inline-block;
-        padding: 10px 28px;
-        background: #00ff00;
-        color: black;
-        font-weight: bold;
-        border-radius: 4px;
-        cursor: pointer;
-        text-align: center;
-    ">
-        OK
-    </button>
-</div>
+                <button id="overlayOkBtn" style="
+                    display:inline-block;
+                    padding:8px 26px;
+                    background:#00ff00;
+                    color:black;
+                    font-weight:bold;
+                    border:none;
+                    border-radius:4px;
+                    cursor:pointer;
+                ">
+                    OK
+                </button>
+            </div>
+        `;
 
-
-`;
-
-        progress.style.width = "100%";
+        progress.style.display = "none";
 
         document.getElementById("overlayOkBtn").addEventListener("click", () => {
             overlay.style.display = "none";
@@ -237,5 +243,3 @@ Payment must be remitted to your group Capt. prior to receiving your order.
 }
 
 loadProducts();
-
-
