@@ -143,6 +143,8 @@ function removeItem(index) {
 
 async function submitOrder() {
 
+    const submitBtn = document.querySelector("button[onclick='submitOrder()']");
+
     if (cart.length === 0) {
         alert("Your cart is empty.");
         return;
@@ -178,11 +180,28 @@ async function submitOrder() {
 
     try {
 
+        // Disable button while processing
+        submitBtn.disabled = true;
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = "Submitting...";
+
         await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
             body: JSON.stringify(orderData)
         });
+
+        // Green success flash (same style as Preorder button)
+        submitBtn.innerText = "✓ Submitted";
+        submitBtn.style.backgroundColor = "#00ff00";
+        submitBtn.style.color = "black";
+
+        setTimeout(() => {
+            submitBtn.innerText = originalText;
+            submitBtn.style.backgroundColor = "";
+            submitBtn.style.color = "";
+            submitBtn.disabled = false;
+        }, 1200);
 
         alert(
             "Preorder Submitted Successfully.\n\n" +
@@ -195,8 +214,8 @@ async function submitOrder() {
         loadProducts();
 
     } catch (error) {
+
+        submitBtn.disabled = false;
         alert("There was an error submitting your order. Please try again.");
     }
 }
-
-loadProducts();
