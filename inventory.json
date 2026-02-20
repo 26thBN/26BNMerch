@@ -73,14 +73,55 @@
       "id": "Beanie#1",
       "name": "Battalion Beanie",
       "description": "Olive Green Beanie with 26th Battalion Insignia (One Size)",
-      "price": 10.0,
+      "price": 10,
       "image": "https://i.imgur.com/jcRiryv.png",
       "sizes": {
         "OSFA": 0
       }
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "preorderNumber": 1001,
+      "state": "MI",
+      "callsign": "Krios",
+      "id": "WDCSticker#1",
+      "item": "WDC DECAL (Not For Sale)",
+      "size": null,
+      "qty": 10,
+      "timestamp": "2026-02-20T23:11:38.539Z"
+    },
+    {
+      "preorderNumber": 1001,
+      "state": "MI",
+      "callsign": "Krios",
+      "id": "Flag#1",
+      "item": "250 Year American Wall Flag",
+      "size": null,
+      "qty": 5,
+      "timestamp": "2026-02-20T23:11:38.539Z"
+    },
+    {
+      "preorderNumber": 1001,
+      "state": "MI",
+      "callsign": "Krios",
+      "id": "hoodie",
+      "item": "Heavyweight Olive Drab Hoodie",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-02-20T23:11:38.539Z"
+    },
+    {
+      "preorderNumber": 1001,
+      "state": "MI",
+      "callsign": "Krios",
+      "id": "Crayons",
+      "item": "Edible Crayons",
+      "size": null,
+      "qty": 100,
+      "timestamp": "2026-02-20T23:11:38.539Z"
+    }
+  ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 0
+  "lastPreorderNumber": 1001
 }
