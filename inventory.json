@@ -73,6 +73,13 @@
       },
       "Preorders": 0,
       "stock": -3
+    },
+    {
+      "id": "Crayons",
+      "name": "Edible Crayons",
+      "description": "Marines love em",
+      "price": 1.0,
+      "image": "https://i.imgur.com/QpStVQR.jpeg"
     }
   ],
   "orders": [
