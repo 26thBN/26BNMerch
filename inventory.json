@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "id": "Beanie#1",
-      "name": "Battalion Beanie",
-      "description": "Olive Green Beanie with 26th Battalion Insignia (One Size)",
-      "price": 10,
-      "threshold": 0,
-      "image": "https://i.imgur.com/jcRiryv.png",
-      "sizes": {
-        "OSFA": 0
-      },
-      "stock": 0
-    },
-    {
       "id": "Tumbler#1",
       "name": "26th Battalion Tumbler",
       "description": "Drink in style with this thermal insulated Tumbler featuring the Battalion Insignia",
@@ -82,28 +70,7 @@
       "image": "https://i.imgur.com/QpStVQR.jpeg"
     }
   ],
-  "orders": [
-    {
-      "preorderNumber": 1001,
-      "state": "MI",
-      "callsign": "KRIOS TEST ORDER",
-      "id": "shirt#1",
-      "item": "Green 26 BN T",
-      "size": "M",
-      "qty": 1,
-      "timestamp": "2026-02-20T20:42:15.383Z"
-    },
-    {
-      "preorderNumber": 1001,
-      "state": "MI",
-      "callsign": "KRIOS TEST ORDER",
-      "id": "Crayons",
-      "item": "Edible Crayons",
-      "size": null,
-      "qty": 1,
-      "timestamp": "2026-02-20T20:42:15.384Z"
-    }
-  ],
+  "orders": [],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1001
+  "lastPreorderNumber": 0
 }
