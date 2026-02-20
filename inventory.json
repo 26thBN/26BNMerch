@@ -170,8 +170,48 @@
       "size": "3XL",
       "qty": 1,
       "timestamp": "2026-02-20T23:13:28.366Z"
+    },
+    {
+      "preorderNumber": 1003,
+      "state": "ID",
+      "callsign": "Red Eagle",
+      "id": "hoodie",
+      "item": "Heavyweight Olive Drab Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-02-20T23:16:44.140Z"
+    },
+    {
+      "preorderNumber": 1003,
+      "state": "ID",
+      "callsign": "Red Eagle",
+      "id": "Crayons",
+      "item": "Edible Crayons",
+      "size": null,
+      "qty": 10,
+      "timestamp": "2026-02-20T23:16:44.143Z"
+    },
+    {
+      "preorderNumber": 1003,
+      "state": "ID",
+      "callsign": "Red Eagle",
+      "id": "Beanie#1",
+      "item": "Battalion Beanie",
+      "size": "OSFA",
+      "qty": 3,
+      "timestamp": "2026-02-20T23:16:44.143Z"
+    },
+    {
+      "preorderNumber": 1003,
+      "state": "ID",
+      "callsign": "Red Eagle",
+      "id": "shirt#1",
+      "item": "Green 26 BN T",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-02-20T23:16:44.143Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1002
+  "lastPreorderNumber": 1003
 }
