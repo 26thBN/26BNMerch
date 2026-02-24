@@ -36,15 +36,6 @@
       "stock": 0
     },
     {
-      "id": "WDCSticker#1",
-      "name": "WDC DECAL (Not For Sale)",
-      "description": "Comprised of Kevlar, these decals will last until Rapture",
-      "price": 100000000,
-      "threshold": 0,
-      "image": "https://i.imgur.com/dsjlmPI.jpeg",
-      "stock": 0
-    },
-    {
       "id": "hoodie",
       "name": "Heavyweight Olive Drab Hoodie",
       "description": "Heavyweight olive drab hoodie with distress American flag..",
@@ -78,6 +69,13 @@
       "sizes": {
         "OSFA": 0
       }
+    },
+    {
+      "id": "WDCSticker#1",
+      "name": "WDC DECAL (Not For Sale)",
+      "description": "Comprised of Kevlar, these decals will last until Rapture",
+      "price": 10000.0,
+      "image": "https://i.imgur.com/dsjlmPI.jpeg"
     }
   ],
   "orders": [
