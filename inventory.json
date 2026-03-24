@@ -1,13 +1,6 @@
 {
   "items": [
     {
-      "id": "WDCSticker#1",
-      "name": "WDC DECAL (Not For Sale)",
-      "description": "Comprised of Kevlar, these decals will last until Rapture",
-      "price": 10000.0,
-      "image": "https://i.imgur.com/dsjlmPI.jpeg"
-    },
-    {
       "id": "Army #IND4000",
       "name": "Army Green 26th Battalion Hoodie",
       "description": "Military Green 26th Battalion Hoodie with rear logo, left breast branding as well as left and right sleeve identifiers",
