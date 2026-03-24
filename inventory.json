@@ -1,13 +1,6 @@
 {
   "items": [
     {
-      "id": "Crayons",
-      "name": "Edible Crayons",
-      "description": "Marines love em",
-      "price": 1,
-      "image": "https://i.imgur.com/QpStVQR.jpeg"
-    },
-    {
       "id": "Beanie#1",
       "name": "Battalion Beanie",
       "description": "Olive Green Beanie with 26th Battalion Insignia (One Size)",
