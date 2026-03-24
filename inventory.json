@@ -76,6 +76,21 @@
       "description": "Comprised of Kevlar, these decals will last until Rapture",
       "price": 10000.0,
       "image": "https://i.imgur.com/dsjlmPI.jpeg"
+    },
+    {
+      "id": "Military Green #6210",
+      "name": "Military Green 26th Battalion T-Shirt",
+      "description": "Military Green 26th Battalion T with rear logo, left breast branding as well as left and right sleeve identifiers",
+      "price": 0.0,
+      "image": "https://imgur.com/sygN7vn",
+      "sizes": {
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "2XL": 0,
+        "3XL": 0
+      }
     }
   ],
   "orders": [],
