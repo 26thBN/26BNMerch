@@ -1,13 +1,6 @@
 {
   "items": [
     {
-      "id": "WDCSticker#1",
-      "name": "WDC DECAL (Not For Sale)",
-      "description": "Comprised of Kevlar, these decals will last until Rapture",
-      "price": 10000.0,
-      "image": "https://i.imgur.com/dsjlmPI.jpeg"
-    },
-    {
       "id": "Military Green #6210",
       "name": "Military Green 26th Battalion T-Shirt",
       "description": "Military Green 26th Battalion T with rear logo, left breast branding as well as left and right sleeve identifiers",
@@ -36,6 +29,13 @@
         "2XL": 0,
         "3XL": 0
       }
+    },
+    {
+      "id": "WDCSticker#1",
+      "name": "WDC DECAL (Not For Sale)",
+      "description": "Comprised of Kevlar, these decals will last until Rapture",
+      "price": 10000.0,
+      "image": "https://i.imgur.com/dsjlmPI.jpeg"
     }
   ],
   "orders": [],
