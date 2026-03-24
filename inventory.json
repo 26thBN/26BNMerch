@@ -1,15 +1,6 @@
 {
   "items": [
     {
-      "id": "Flag#1",
-      "name": "250 Year American Wall Flag",
-      "description": "Celebrate 250 of World Dominance!  American Made High Quality Polyester",
-      "price": 75,
-      "threshold": 0,
-      "image": "https://i.imgur.com/p09CXKy.png",
-      "stock": 0
-    },
-    {
       "id": "hoodie",
       "name": "Heavyweight Olive Drab Hoodie",
       "description": "Heavyweight olive drab hoodie with distress American flag..",
