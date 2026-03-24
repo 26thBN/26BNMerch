@@ -1,15 +1,6 @@
 {
   "items": [
     {
-      "id": "Tumbler#1",
-      "name": "26th Battalion Tumbler",
-      "description": "Drink in style with this thermal insulated Tumbler featuring the Battalion Insignia",
-      "price": 20,
-      "threshold": 0,
-      "image": "https://i.imgur.com/cg1nJ7e.png",
-      "stock": 0
-    },
-    {
       "id": "shirt#1",
       "name": "Green 26 BN T",
       "description": "100% cotton battalion tee.",
