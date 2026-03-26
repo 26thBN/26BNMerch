@@ -60,6 +60,21 @@
         "2XL": 34.0,
         "3XL": 36.0
       }
+    },
+    {
+      "id": "26th BN Black T shirt",
+      "name": "26th BN Black T-Shirt",
+      "description": "White Decal on Black T-Shirt",
+      "price": 22.0,
+      "image": "https://i.imgur.com/waWHb6R.png",
+      "prices": {
+        "S": 22.0,
+        "M": 22.0,
+        "L": 22.0,
+        "XL": 22.0,
+        "2XL": 24.0,
+        "3XL": 26.0
+      }
     }
   ],
   "orders": [
