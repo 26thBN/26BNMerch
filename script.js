@@ -191,10 +191,15 @@ async function submitOrder() {
         orderData.specialInstructions = specialInstructions;
         console.log("SENDING ORDER:", orderData);
         const payload = {
-            ...orderData,
-            specialInstructions: specialInstructions
+            customer: callsign,
+            customerEmail: customerEmail,
+            state: state,
+            items: cart,
+            total: total,
+            specialInstructions: specialInstructions,
+            timestamp: new Date().toISOString()
         };
-        
+                
         console.log("FINAL PAYLOAD:", payload);
                 await fetch(PROXY_URL, {
             method: "POST",
