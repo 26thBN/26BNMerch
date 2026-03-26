@@ -167,6 +167,21 @@
         "2XL": 31.0,
         "3XL": 33.0
       }
+    },
+    {
+      "id": "WDC Military Green Hoodie",
+      "name": "Watchdog Military Green Hoodie",
+      "description": "Watchdog Decals On Military Green",
+      "price": 32.0,
+      "image": "https://i.imgur.com/iGbaUEy.png",
+      "prices": {
+        "S": 32.0,
+        "M": 32.0,
+        "L": 32.0,
+        "XL": 32.0,
+        "2XL": 34.0,
+        "3XL": 36.0
+      }
     }
   ],
   "orders": [
