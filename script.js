@@ -176,7 +176,6 @@ async function submitOrder() {
         state: state,
         items: cart,
         total: total,
-        specialInstructions: specialInstructions,
         timestamp: new Date().toISOString()
     };
 
@@ -186,7 +185,6 @@ async function submitOrder() {
         submitBtn.disabled = true;
         const originalText = submitBtn.innerText;
         submitBtn.innerText = "Submitting...";
-        orderData.specialInstructions = specialInstructions;
         console.log("SENDING ORDER:", orderData);
         const payload = {
             customer: callsign,
@@ -194,7 +192,6 @@ async function submitOrder() {
             state: state,
             items: cart,
             total: total,
-            specialInstructions: document.getElementById("specialInstructions").value.trim(),
             timestamp: new Date().toISOString()
         };
                 
