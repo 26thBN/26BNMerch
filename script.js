@@ -75,13 +75,17 @@ function addToCart(id, name, price, buttonEl) {
     const qty = parseInt(document.getElementById(`qty-${id}`).value);
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
+    const selectedItem = window.inventoryItems.find(i => i.id === id);
+    const finalPrice = selectedItem && selectedItem.prices && size
+    ? selectedItem.prices[size]
+    : price;
 
     const existing = cart.find(item => item.id === id && item.size === size);
 
     if (existing) {
         existing.quantity += qty;
     } else {
-        cart.push({ id, name, price, quantity: qty, size });
+        cart.push({ id, name, price: finalPrice, quantity: qty, size });
     }
 
     updateCart();
