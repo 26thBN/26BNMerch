@@ -153,6 +153,7 @@ async function submitOrder() {
     const callsign = document.getElementById("callsign").value.trim();
     const customerEmail = document.getElementById("customerEmail").value.trim();
     const state = document.getElementById("state").value;
+    const specialInstructions = document.getElementById("specialInstructions").value.trim();
 
     if (!customerEmail) {
         alert("Email is required.");
@@ -175,6 +176,7 @@ async function submitOrder() {
         state: state,
         items: cart,
         total: total,
+        specialInstructions: specialInstructions,
         timestamp: new Date().toISOString()
     };
 
