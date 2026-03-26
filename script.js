@@ -75,21 +75,41 @@ function addToCart(id, name, price, buttonEl) {
     const qty = parseInt(document.getElementById(`qty-${id}`).value);
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
-    const selectedItem = cart.find(i => i.id === id);
-    const sizeSelect = document.getElementById(`size-${id}`);
-    const size = sizeSelect ? sizeSelect.value : null;
-    
+
     let finalPrice = price;
-    
-    if (sizeSelect) {
-        const priceMap = sizeSelect.dataset.prices
-            ? JSON.parse(sizeSelect.dataset.prices)
-            : null;
-    
+
+    if (sizeSelect && sizeSelect.dataset.prices) {
+        const priceMap = JSON.parse(sizeSelect.dataset.prices);
+
         if (priceMap && priceMap[size]) {
             finalPrice = priceMap[size];
         }
     }
+
+    const existing = cart.find(item => item.id === id && item.size === size);
+
+    if (existing) {
+        existing.quantity += qty;
+    } else {
+        cart.push({ id, name, price: finalPrice, quantity: qty, size });
+    }
+
+    updateCart();
+
+    if (buttonEl) {
+        const originalText = buttonEl.innerText;
+
+        buttonEl.innerText = "✓ Added";
+        buttonEl.style.backgroundColor = "#00ff00";
+        buttonEl.style.color = "black";
+
+        setTimeout(() => {
+            buttonEl.innerText = originalText;
+            buttonEl.style.backgroundColor = "";
+            buttonEl.style.color = "";
+        }, 1000);
+    }
+}
 
     const existing = cart.find(item => item.id === id && item.size === size);
 
