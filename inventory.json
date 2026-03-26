@@ -102,16 +102,6 @@
       }
     },
     {
-      "id": "26th BC OCP Snap Back Cap",
-      "name": "26th BC OCP Snap Back Cap",
-      "description": "26th BC OCP Snap Back Cap",
-      "price": 24.0,
-      "image": "https://i.imgur.com/VYIdGOq.png",
-      "prices": {
-        "OSFA": 0.0
-      }
-    },
-    {
       "id": "WDC Windbreaker",
       "name": "Watchdog Defense Windbreaker",
       "description": "Army Green Half Zip Windbreaker",
@@ -125,6 +115,13 @@
         "2XL": 44.0,
         "3XL": 48.0
       }
+    },
+    {
+      "id": "26th BC OCP Snap Back Cap",
+      "name": "26th BN OCP Snap Back Cap",
+      "description": "26th BC OCP Snap Back Cap",
+      "price": 24.0,
+      "image": "https://i.imgur.com/VYIdGOq.png"
     }
   ],
   "orders": [
