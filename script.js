@@ -76,17 +76,18 @@ function addToCart(id, name, price, buttonEl) {
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
     const selectedItem = cart.find(i => i.id === id);
-    const itemCard = document.getElementById(`btn-${id}`).closest("div");
-    const selectEl = itemCard.querySelector("select");
+    const sizeSelect = document.getElementById(`size-${id}`);
+    const size = sizeSelect ? sizeSelect.value : null;
     
     let finalPrice = price;
     
-    if (selectEl) {
-        const selectedSize = selectEl.value;
-        const product = window.productsData.find(p => p.id === id);
+    if (sizeSelect) {
+        const priceMap = sizeSelect.dataset.prices
+            ? JSON.parse(sizeSelect.dataset.prices)
+            : null;
     
-        if (product && product.prices && product.prices[selectedSize]) {
-            finalPrice = product.prices[selectedSize];
+        if (priceMap && priceMap[size]) {
+            finalPrice = priceMap[size];
         }
     }
 
