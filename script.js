@@ -153,6 +153,7 @@ async function submitOrder() {
     const callsign = document.getElementById("callsign").value.trim();
     const customerEmail = document.getElementById("customerEmail").value.trim();
     const state = document.getElementById("state").value;
+    console.log("ELEMENT:", document.getElementById("specialInstructions"));
     const specialInstructions = document.getElementById("specialInstructions").value.trim();
 
     if (!customerEmail) {
