@@ -100,6 +100,16 @@
       "prices": {
         "OSFA": 0.0
       }
+    },
+    {
+      "id": "26th BC OCP Snap Back Cap",
+      "name": "26th BC OCP Snap Back Cap",
+      "description": "26th BC OCP Snap Back Cap",
+      "price": 24.0,
+      "image": "https://i.imgur.com/VYIdGOq.png",
+      "prices": {
+        "OSFA": 0.0
+      }
     }
   ],
   "orders": [
