@@ -186,7 +186,7 @@ async function submitOrder() {
         submitBtn.disabled = true;
         const originalText = submitBtn.innerText;
         submitBtn.innerText = "Submitting...";
-
+        console.log("SENDING ORDER:", orderData);
         await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
