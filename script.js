@@ -231,4 +231,3 @@ async function submitOrder() {
 }
 
 loadProducts();
-
