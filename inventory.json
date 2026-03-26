@@ -2,21 +2,6 @@
   "preorderEndDate": "2026-04-30",
   "items": [
     {
-      "id": "26th BN Army Green Hoodie",
-      "name": "Army Green 26th Battalion Hoodie ",
-      "description": "Black decal on Army green Hoodie",
-      "price": 32.0,
-      "image": "https://i.imgur.com/d27LTTy.png",
-      "prices": {
-        "S": 32.0,
-        "M": 32.0,
-        "L": 32.0,
-        "XL": 32.0,
-        "2XL": 34.0,
-        "3XL": 36.0
-      }
-    },
-    {
       "id": "26th BN Black T shirt",
       "name": "26th BN Black T-Shirt",
       "description": "White Decal on Black T-Shirt",
@@ -67,6 +52,21 @@
       "description": "Black decal on Military Green T-Shirt",
       "price": 22.0,
       "image": "https://i.imgur.com/sygN7vn.jpg",
+      "prices": {
+        "S": 22.0,
+        "M": 22.0,
+        "L": 22.0,
+        "XL": 22.0,
+        "2XL": 24.0,
+        "3XL": 26.0
+      }
+    },
+    {
+      "id": "26th BN Army Green Hoodie",
+      "name": "Army Green 26th BN Hoodie ",
+      "description": "Black decal on Army green Hoodie",
+      "price": 32.0,
+      "image": "https://i.imgur.com/d27LTTy.png",
       "prices": {
         "S": 22.0,
         "M": 22.0,
