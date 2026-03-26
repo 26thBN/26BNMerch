@@ -15,9 +15,6 @@ async function loadProducts() {
 
         const data = await response.json();
 
-        console.log(data);
-        console.log(data.items);
-
         if (!data.items || !Array.isArray(data.items)) {
             throw new Error("Inventory format invalid");
         }
@@ -30,16 +27,15 @@ async function loadProducts() {
             const div = document.createElement("div");
             div.className = "product";
 
-            let sizeOptions = "";
+            let sizeDropdown = "";
 
             if (item.prices) {
+                let options = "";
                 Object.keys(item.prices).forEach(size => {
-                    sizeOptions += `
-                        <option value="${size}">
-                            ${size}
-                        </option>
-                    `;
+                    options += `<option value="${size}">${size}</option>`;
                 });
+
+                sizeDropdown = `<select id="size-${item.id}">${options}</select>`;
             }
 
             div.innerHTML = `
@@ -47,15 +43,11 @@ async function loadProducts() {
                 <h3>${item.name}</h3>
                 <p>${item.description}</p>
                 <p>$${item.price}</p>
-
-                ${item.prices
-                    ? `<select id="size-${item.id}" data-prices="${encodeURIComponent(JSON.stringify(item.prices))}">${sizeOptions}</select>`
-                    : ""}
-
+                ${sizeDropdown}
                 <br>
                 <input type="number" id="qty-${item.id}" value="1" min="1">
                 <br>
-                <button id="btn-${item.id}" onclick="addToCart('${item.id}', '${item.name}', ${item.price}, this)">
+                <button onclick="addToCart('${item.id}', '${item.name}', ${item.price}, this)">
                     Preorder
                 </button>
             `;
