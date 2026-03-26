@@ -183,7 +183,6 @@ async function submitOrder() {
         state: state,
         items: cart,
         total: total,
-        specialInstructions: specialInstructions,
         timestamp: new Date().toISOString()
     };
 
