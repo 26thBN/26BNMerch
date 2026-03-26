@@ -197,6 +197,7 @@ async function submitOrder() {
                 ...orderData,
                 specialInstructions: specialInstructions
             })
+        });
 
         // Green success flash (same style as Preorder button)
         submitBtn.innerText = "✓ Submitted";
