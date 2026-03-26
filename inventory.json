@@ -110,6 +110,21 @@
       "prices": {
         "OSFA": 0.0
       }
+    },
+    {
+      "id": "WDC Windbreaker",
+      "name": "Watchdog Defense Windbreaker",
+      "description": "Army Green Half Zip Windbreaker",
+      "price": 42.0,
+      "image": "https://i.imgur.com/PuaDsoy.png",
+      "prices": {
+        "S": 42.0,
+        "M": 42.0,
+        "L": 42.0,
+        "XL": 42.0,
+        "2XL": 44.0,
+        "3XL": 48.0
+      }
     }
   ],
   "orders": [
