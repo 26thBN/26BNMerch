@@ -15,6 +15,9 @@ async function loadProducts() {
 
         const data = await response.json();
 
+        console.log(data);
+        console.log(data.items);
+
         if (!data.items || !Array.isArray(data.items)) {
             throw new Error("Inventory format invalid");
         }
@@ -27,15 +30,16 @@ async function loadProducts() {
             const div = document.createElement("div");
             div.className = "product";
 
-            let sizeDropdown = "";
+            let sizeOptions = "";
 
-            if (item.prices) {
-                let options = "";
-                Object.keys(item.prices).forEach(size => {
-                    options += `<option value="${size}">${size}</option>`;
+            if (item.sizes) {
+                Object.keys(item.sizes).forEach(size => {
+                    sizeOptions += `
+                        <option value="${size}">
+                            ${size}
+                        </option>
+                    `;
                 });
-
-                sizeDropdown = `<select id="size-${item.id}">${options}</select>`;
             }
 
             div.innerHTML = `
@@ -43,11 +47,15 @@ async function loadProducts() {
                 <h3>${item.name}</h3>
                 <p>${item.description}</p>
                 <p>$${item.price}</p>
-                ${sizeDropdown}
+
+                ${item.sizes
+                    ? `<select id="size-${item.id}">${sizeOptions}</select>`
+                    : ""}
+
                 <br>
                 <input type="number" id="qty-${item.id}" value="1" min="1">
                 <br>
-                <button onclick="addToCart('${item.id}', '${item.name}', ${item.price}, this)">
+                <button id="btn-${item.id}" onclick="addToCart('${item.id}', '${item.name}', ${item.price}, this)">
                     Preorder
                 </button>
             `;
@@ -73,32 +81,7 @@ function addToCart(id, name, price, buttonEl) {
     if (existing) {
         existing.quantity += qty;
     } else {
-        cart.push({ id, name, price: price, quantity: qty, size });
-    }
-
-    updateCart();
-
-    if (buttonEl) {
-        const originalText = buttonEl.innerText;
-
-        buttonEl.innerText = "✓ Added";
-        buttonEl.style.backgroundColor = "#00ff00";
-        buttonEl.style.color = "black";
-
-        setTimeout(() => {
-            buttonEl.innerText = originalText;
-            buttonEl.style.backgroundColor = "";
-            buttonEl.style.color = "";
-        }, 1000);
-    }
-}
-
-    const existing = cart.find(item => item.id === id && item.size === size);
-
-    if (existing) {
-        existing.quantity += qty;
-    } else {
-        cart.push({ id, name, price: finalPrice, quantity: qty, size });
+        cart.push({ id, name, price, quantity: qty, size });
     }
 
     updateCart();
@@ -170,7 +153,7 @@ async function submitOrder() {
     const callsign = document.getElementById("callsign").value.trim();
     const customerEmail = document.getElementById("customerEmail").value.trim();
     const state = document.getElementById("state").value;
-    
+    const specialInstructions = document.getElementById("specialInstructions").value.trim();
 
     if (!customerEmail) {
         alert("Email is required.");
@@ -193,6 +176,7 @@ async function submitOrder() {
         state: state,
         items: cart,
         total: total,
+        specialInstructions: specialInstructions,
         timestamp: new Date().toISOString()
     };
 
@@ -202,22 +186,11 @@ async function submitOrder() {
         submitBtn.disabled = true;
         const originalText = submitBtn.innerText;
         submitBtn.innerText = "Submitting...";
-        console.log("SENDING ORDER:", orderData);
-        const payload = {
-            customer: callsign,
-            customerEmail: customerEmail,
-            state: state,
-            items: cart,
-            total: total,
-            timestamp: new Date().toISOString()
-        };
-                
-        console.log("FINAL PAYLOAD:", payload);
-                await fetch(PROXY_URL, {
+
+        await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
             body: JSON.stringify(orderData)
-            
         });
 
         // Green success flash (same style as Preorder button)
@@ -250,5 +223,4 @@ async function submitOrder() {
 }
 
 loadProducts();
-
 
