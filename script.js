@@ -75,7 +75,7 @@ function addToCart(id, name, price, buttonEl) {
     const qty = parseInt(document.getElementById(`qty-${id}`).value);
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
-    const selectedItem = items.find(i => i.id === id);
+    const selectedItem = inventory.items.find(i => i.id === id);
     const finalPrice = selectedItem && selectedItem.prices && size
     ? selectedItem.prices[size]
     : price;
