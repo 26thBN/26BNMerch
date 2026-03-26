@@ -152,8 +152,7 @@ function removeItem(index) {
 
 async function submitOrder() {
 
-    const submitBtn = document.querySelector("button[onclick='submitOrder()']");
-
+    const submitBtn = document.getElementById("submit-order-btn");
     if (cart.length === 0) {
         alert("Your cart is empty.");
         return;
