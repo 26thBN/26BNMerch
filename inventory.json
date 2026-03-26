@@ -152,6 +152,21 @@
         "2XL": 34.0,
         "3XL": 36.0
       }
+    },
+    {
+      "id": "WDC Crew neck ",
+      "name": "Watchdog Military Green Crew neck Shirt",
+      "description": "WDC Decals on Military Green",
+      "price": 29.0,
+      "image": "https://i.imgur.com/g0xEhpW.png",
+      "prices": {
+        "S": 29.0,
+        "M": 29.0,
+        "L": 29.0,
+        "XL": 29.0,
+        "2XL": 31.0,
+        "3XL": 33.0
+      }
     }
   ],
   "orders": [
