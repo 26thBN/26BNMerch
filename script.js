@@ -199,7 +199,7 @@ async function submitOrder() {
                 await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(orderData)
             
         });
 
