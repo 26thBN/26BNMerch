@@ -5,30 +5,45 @@
       "id": "Military Green #6210",
       "name": "Military Green 26th Battalion T-Shirt",
       "description": "Military Green 26th Battalion T-Shirt with rear logo, left breast branding as well as left and right sleeve identifiers",
-      "price": 22,
+      "price": 22.0,
       "image": "https://i.imgur.com/sygN7vn.jpg",
       "prices": {
-        "S": 22,
-        "M": 22,
-        "L": 22,
-        "XL": 22,
-        "2XL": 24,
-        "3XL": 26
+        "S": 22.0,
+        "M": 22.0,
+        "L": 22.0,
+        "XL": 22.0,
+        "2XL": 24.0,
+        "3XL": 26.0
       }
     },
     {
       "id": "Army #IND4000",
       "name": "Army Green 26th Battalion Hoodie",
       "description": "Military Green 26th Battalion Hoodie with rear logo, left breast branding as well as left and right sleeve identifiers",
-      "price": 32,
+      "price": 32.0,
       "image": "https://i.imgur.com/jHb7zEg.jpg",
       "prices": {
-        "S": 32,
-        "M": 32,
-        "L": 32,
-        "XL": 32,
-        "2XL": 34,
-        "3XL": 36
+        "S": 32.0,
+        "M": 32.0,
+        "L": 32.0,
+        "XL": 32.0,
+        "2XL": 34.0,
+        "3XL": 36.0
+      }
+    },
+    {
+      "id": "Black #IND4000",
+      "name": "Back 26th Battalion Hoodie",
+      "description": "White branding on black hoodie",
+      "price": 32.0,
+      "image": "https://i.imgur.com/XCTHxj9.png",
+      "prices": {
+        "S": 32.0,
+        "M": 32.0,
+        "L": 32.0,
+        "XL": 32.0,
+        "2XL": 34.0,
+        "3XL": 36.0
       }
     }
   ],
