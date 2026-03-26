@@ -14,6 +14,7 @@ async function loadProducts() {
         }
 
         const data = await response.json();
+        window.productsData = data.items;
 
         console.log(data);
         console.log(data.items);
@@ -76,12 +77,20 @@ function addToCart(id, name, price, buttonEl) {
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
 
-    const existing = cart.find(item => item.id === id && item.size === size);
+    let finalPrice = price;
 
+    const product = window.productsData?.find(p => p.id === id);
+    
+    if (product && product.prices && size && product.prices[size]) {
+        finalPrice = product.prices[size];
+    }
+    
+    const existing = cart.find(item => item.id === id && item.size === size);
+    
     if (existing) {
         existing.quantity += qty;
     } else {
-        cart.push({ id, name, price, quantity: qty, size });
+        cart.push({ id, name, price: finalPrice, quantity: qty, size });
     }
 
     updateCart();
