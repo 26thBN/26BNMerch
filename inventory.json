@@ -45,6 +45,21 @@
         "2XL": 34.0,
         "3XL": 36.0
       }
+    },
+    {
+      "id": "26th BN Army Green Hoodie",
+      "name": "Army Green 26th Battalion Hoodie ",
+      "description": "Black decal on Army green Hoodie",
+      "price": 32.0,
+      "image": "https://i.imgur.com/d27LTTy.png",
+      "prices": {
+        "S": 32.0,
+        "M": 32.0,
+        "L": 32.0,
+        "XL": 32.0,
+        "2XL": 34.0,
+        "3XL": 36.0
+      }
     }
   ],
   "orders": [
