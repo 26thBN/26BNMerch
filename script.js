@@ -196,7 +196,7 @@ async function submitOrder() {
             state: state,
             items: cart,
             total: total,
-            specialInstructions: specialInstructions,
+            specialInstructions: document.getElementById("specialInstructions").value.trim(),
             timestamp: new Date().toISOString()
         };
                 
