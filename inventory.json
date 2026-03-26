@@ -122,6 +122,21 @@
       "description": "26th BC OCP Snap Back Cap",
       "price": 24.0,
       "image": "https://i.imgur.com/VYIdGOq.png"
+    },
+    {
+      "id": "WDC Military Green T-Shirt #6210",
+      "name": "Watchdog Military Green T-shirt",
+      "description": "WDC Decal On Military Green",
+      "price": 22.0,
+      "image": "https://i.imgur.com/X4ABesk.png",
+      "prices": {
+        "S": 22.0,
+        "M": 22.0,
+        "L": 22.0,
+        "XL": 22.0,
+        "2XL": 24.0,
+        "3XL": 26.0
+      }
     }
   ],
   "orders": [
