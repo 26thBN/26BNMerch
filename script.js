@@ -70,7 +70,7 @@ async function loadProducts() {
     }
 }
 
-function addToCart(id, name, price, buttonEl) {
+function addToCart(id, name, price: item.prices ? item.prices[size] : price,, buttonEl) {
 
     const qty = parseInt(document.getElementById(`qty-${id}`).value);
     const sizeSelect = document.getElementById(`size-${id}`);
