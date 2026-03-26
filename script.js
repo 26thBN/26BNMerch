@@ -193,8 +193,10 @@ async function submitOrder() {
         await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
-            body: JSON.stringify(orderData)
-        });
+            body: JSON.stringify({
+                ...orderData,
+                specialInstructions: specialInstructions
+            })
 
         // Green success flash (same style as Preorder button)
         submitBtn.innerText = "✓ Submitted";
