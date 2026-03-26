@@ -222,8 +222,28 @@
       "size": "S",
       "qty": 1,
       "timestamp": "2026-03-26T04:14:51.017Z"
+    },
+    {
+      "preorderNumber": 1011,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "Army #IND4000",
+      "item": "Army Green 26th Battalion Hoodie",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-03-26T04:25:55.906Z"
+    },
+    {
+      "preorderNumber": 1011,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "Military Green #6210",
+      "item": "Military Green 26th Battalion T-Shirt",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-03-26T04:25:55.909Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1010
+  "lastPreorderNumber": 1011
 }
