@@ -49,7 +49,7 @@ async function loadProducts() {
                 <p>$${item.price}</p>
 
                 ${item.prices
-                    ? `<select id="size-${item.id}" data-prices="${encodeURIComponent(JSON.stringify(item.prices))}"'>${sizeOptions}</select>`
+                    ? `<select id="size-${item.id}" data-prices="${encodeURIComponent(JSON.stringify(item.prices))}">${sizeOptions}</select>`
                     : ""}
 
                 <br>
