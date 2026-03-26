@@ -20,15 +20,15 @@
       "id": "Military Green #6210",
       "name": "Military Green 26th Battalion T-Shirt",
       "description": "Military Green 26th Battalion T-Shirt with rear logo, left breast branding as well as left and right sleeve identifiers",
-      "price": 0,
+      "price": 22.0,
       "image": "https://i.imgur.com/sygN7vn.jpg",
-      "sizes": {
-        "S": 0,
-        "M": 0,
-        "L": 0,
-        "XL": 0,
-        "2XL": 0,
-        "3XL": 0
+      "prices": {
+        "S": 22.0,
+        "M": 22.0,
+        "L": 22.0,
+        "XL": 22.0,
+        "2XL": 24.0,
+        "3XL": 26.0
       }
     }
   ],
