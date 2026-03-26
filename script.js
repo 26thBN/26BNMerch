@@ -32,8 +32,8 @@ async function loadProducts() {
 
             let sizeOptions = "";
 
-            if (item.sizes) {
-                Object.keys(item.sizes).forEach(size => {
+            if (item.prices) {
+                Object.keys(item.prices).forEach(size => {
                     sizeOptions += `
                         <option value="${size}">
                             ${size}
@@ -48,7 +48,7 @@ async function loadProducts() {
                 <p>${item.description}</p>
                 <p>$${item.price}</p>
 
-                ${item.sizes
+                ${item.prices
                     ? `<select id="size-${item.id}">${sizeOptions}</select>`
                     : ""}
 
