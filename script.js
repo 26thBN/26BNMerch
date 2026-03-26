@@ -153,9 +153,7 @@ async function submitOrder() {
     const callsign = document.getElementById("callsign").value.trim();
     const customerEmail = document.getElementById("customerEmail").value.trim();
     const state = document.getElementById("state").value;
-    console.log("ELEMENT:", document.getElementById("specialInstructions"));
-    console.log("VALUE:", document.getElementById("specialInstructions").value);
-    const specialInstructions = document.getElementById("specialInstructions").value.trim();
+    
 
     if (!customerEmail) {
         alert("Email is required.");
