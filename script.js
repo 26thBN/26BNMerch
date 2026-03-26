@@ -76,22 +76,12 @@ function addToCart(id, name, price, buttonEl) {
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
 
-    let finalPrice = price;
-
-    if (sizeSelect && sizeSelect.dataset.prices) {
-        const priceMap = JSON.parse(decodeURIComponent(sizeSelect.dataset.prices));
-
-        if (priceMap && priceMap[size]) {
-            finalPrice = priceMap[size];
-        }
-    }
-
     const existing = cart.find(item => item.id === id && item.size === size);
 
     if (existing) {
         existing.quantity += qty;
     } else {
-        cart.push({ id, name, price: finalPrice, quantity: qty, size });
+        cart.push({ id, name, price: price, quantity: qty, size });
     }
 
     updateCart();
