@@ -2,21 +2,6 @@
   "preorderEndDate": "2026-04-30",
   "items": [
     {
-      "id": "Army #IND4000",
-      "name": "Army Green 26th Battalion Hoodie",
-      "description": "Military Green 26th Battalion Hoodie with rear logo, left breast branding as well as left and right sleeve identifiers",
-      "price": 0,
-      "image": "https://i.imgur.com/jHb7zEg.jpg",
-      "sizes": {
-        "S": 0,
-        "M": 0,
-        "L": 0,
-        "XL": 0,
-        "2XL": 0,
-        "3XL": 0
-      }
-    },
-    {
       "id": "Military Green #6210",
       "name": "Military Green 26th Battalion T-Shirt",
       "description": "Military Green 26th Battalion T-Shirt with rear logo, left breast branding as well as left and right sleeve identifiers",
@@ -29,6 +14,21 @@
         "XL": 22.0,
         "2XL": 24.0,
         "3XL": 26.0
+      }
+    },
+    {
+      "id": "Army #IND4000",
+      "name": "Army Green 26th Battalion Hoodie",
+      "description": "Military Green 26th Battalion Hoodie with rear logo, left breast branding as well as left and right sleeve identifiers",
+      "price": 32.0,
+      "image": "https://i.imgur.com/jHb7zEg.jpg",
+      "prices": {
+        "S": 32.0,
+        "M": 32.0,
+        "L": 32.0,
+        "XL": 32.0,
+        "2XL": 34.0,
+        "3XL": 36.0
       }
     }
   ],
