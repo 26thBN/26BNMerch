@@ -203,7 +203,7 @@ async function submitOrder() {
         console.log("FINAL PAYLOAD:", payload);
                 await fetch(PROXY_URL, {
             method: "POST",
-            headers: { "Content-Type": "text/plain" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
             
         });
