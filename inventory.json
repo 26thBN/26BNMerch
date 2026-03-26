@@ -5,30 +5,30 @@
       "id": "Military Green #6210",
       "name": "Military Green 26th Battalion T-Shirt",
       "description": "Military Green 26th Battalion T-Shirt with rear logo, left breast branding as well as left and right sleeve identifiers",
-      "price": 22.0,
+      "price": 22,
       "image": "https://i.imgur.com/sygN7vn.jpg",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "Army #IND4000",
       "name": "Army Green 26th Battalion Hoodie",
       "description": "Military Green 26th Battalion Hoodie with rear logo, left breast branding as well as left and right sleeve identifiers",
-      "price": 32.0,
+      "price": 32,
       "image": "https://i.imgur.com/jHb7zEg.jpg",
       "prices": {
-        "S": 32.0,
-        "M": 32.0,
-        "L": 32.0,
-        "XL": 32.0,
-        "2XL": 34.0,
-        "3XL": 36.0
+        "S": 32,
+        "M": 32,
+        "L": 32,
+        "XL": 32,
+        "2XL": 34,
+        "3XL": 36
       }
     }
   ],
@@ -362,8 +362,18 @@
       "size": "S",
       "qty": 1,
       "timestamp": "2026-03-26T05:21:11.177Z"
+    },
+    {
+      "preorderNumber": 1018,
+      "state": "CA",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "Military Green #6210",
+      "item": "Military Green 26th Battalion T-Shirt",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-03-26T08:10:17.514Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1017
+  "lastPreorderNumber": 1018
 }
