@@ -76,9 +76,19 @@ function addToCart(id, name, price, buttonEl) {
     const sizeSelect = document.getElementById(`size-${id}`);
     const size = sizeSelect ? sizeSelect.value : null;
     const selectedItem = cart.find(i => i.id === id);
-    const finalPrice = selectedItem && selectedItem.prices && size
-    ? selectedItem.prices[size]
-    : price;
+    const itemCard = document.getElementById(`btn-${id}`).closest("div");
+    const selectEl = itemCard.querySelector("select");
+    
+    let finalPrice = price;
+    
+    if (selectEl) {
+        const selectedSize = selectEl.value;
+        const product = window.productsData.find(p => p.id === id);
+    
+        if (product && product.prices && product.prices[selectedSize]) {
+            finalPrice = product.prices[selectedSize];
+        }
+    }
 
     const existing = cart.find(item => item.id === id && item.size === size);
 
