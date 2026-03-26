@@ -47,11 +47,11 @@
       }
     },
     {
-      "id": "Army #IND4000",
-      "name": "Army Green 26th Battalion Hoodie",
-      "description": "Black decal on Military green Hoodie",
+      "id": "Black #IND4000",
+      "name": "26th Battalion Black Hoodie",
+      "description": "White branding on black hoodie",
       "price": 32.0,
-      "image": "https://i.imgur.com/jHb7zEg.jpg",
+      "image": "https://i.imgur.com/XCTHxj9.png",
       "prices": {
         "S": 22.0,
         "M": 22.0,
@@ -62,11 +62,11 @@
       }
     },
     {
-      "id": "Black #IND4000",
-      "name": "26th Battalion Black Hoodie",
-      "description": "White branding on black hoodie",
+      "id": "Army #IND4000",
+      "name": "26th Battalion Army Green Hoodie",
+      "description": "Black decal on Military green Hoodie",
       "price": 32.0,
-      "image": "https://i.imgur.com/XCTHxj9.png",
+      "image": "https://i.imgur.com/jHb7zEg.jpg",
       "prices": {
         "S": 22.0,
         "M": 22.0,
