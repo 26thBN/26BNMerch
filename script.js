@@ -190,13 +190,17 @@ async function submitOrder() {
         submitBtn.innerText = "Submitting...";
         orderData.specialInstructions = specialInstructions;
         console.log("SENDING ORDER:", orderData);
-        await fetch(PROXY_URL, {
+        const payload = {
+            ...orderData,
+            specialInstructions: specialInstructions
+        };
+        
+        console.log("FINAL PAYLOAD:", payload);
+                await fetch(PROXY_URL, {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
-            body: JSON.stringify({
-                ...orderData,
-                specialInstructions: specialInstructions
-            })
+            body: JSON.stringify(payload)
+            
         });
 
         // Green success flash (same style as Preorder button)
