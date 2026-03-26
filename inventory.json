@@ -90,6 +90,16 @@
         "2XL": 0.0,
         "3XL": 0.0
       }
+    },
+    {
+      "id": "WDC OCP Snapback",
+      "name": "Watchdog OCP Snap Back Cap",
+      "description": "Watchdog Defense OCP Snap Back Cap",
+      "price": 24.0,
+      "image": "https://i.imgur.com/RfCsn1s.png",
+      "prices": {
+        "OSFA": 0.0
+      }
     }
   ],
   "orders": [
