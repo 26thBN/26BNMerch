@@ -53,12 +53,8 @@
       "price": 27,
       "image": "https://i.imgur.com/6Q26cQx.png",
       "prices": {
-        "S": 27,
-        "M": 27,
-        "L": 27,
-        "XL": 27,
-        "2XL": 0,
-        "3XL": 0
+        "S/M": 27,
+        "L/XL": 27
       }
     },
     {
