@@ -32,21 +32,6 @@
       }
     },
     {
-      "id": "Military Green #6210",
-      "name": "Military Green 26th Battalion T-Shirt",
-      "description": "Black decal on Military Green T-Shirt",
-      "price": 22.0,
-      "image": "https://i.imgur.com/sygN7vn.jpg",
-      "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
-      }
-    },
-    {
       "id": "Black #IND4000",
       "name": "26th Battalion Black Hoodie",
       "description": "White branding on black hoodie",
@@ -67,6 +52,21 @@
       "description": "Black decal on Military green Hoodie",
       "price": 32.0,
       "image": "https://i.imgur.com/jHb7zEg.jpg",
+      "prices": {
+        "S": 22.0,
+        "M": 22.0,
+        "L": 22.0,
+        "XL": 22.0,
+        "2XL": 24.0,
+        "3XL": 26.0
+      }
+    },
+    {
+      "id": "Military Green #6210",
+      "name": "26th Battalion Army Green T-Shirt",
+      "description": "Black decal on Military Green T-Shirt",
+      "price": 22.0,
+      "image": "https://i.imgur.com/sygN7vn.jpg",
       "prices": {
         "S": 22.0,
         "M": 22.0,
