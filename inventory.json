@@ -5,182 +5,182 @@
       "id": "26th BN Black T shirt",
       "name": "26th BN Black T-Shirt",
       "description": "White Decal on Black T-Shirt",
-      "price": 22.0,
+      "price": 22,
       "image": "https://i.imgur.com/waWHb6R.png",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "Black #IND4000",
       "name": "26th BN Black Hoodie",
       "description": "White Branding on Black Hoodie",
-      "price": 32.0,
+      "price": 32,
       "image": "https://i.imgur.com/XCTHxj9.png",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "26th BN Army Green Hoodie",
       "name": "26th BN Army Green Hoodie ",
       "description": "Black Decal on Army Green Hoodie",
-      "price": 32.0,
+      "price": 32,
       "image": "https://i.imgur.com/d27LTTy.png",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "WDC Multicam Fitted OCP ",
       "name": "Watchdog Defense OCP Fitted Cap",
       "description": "Watchdog Defense OCP Fitted Cap",
-      "price": 27.0,
+      "price": 27,
       "image": "https://i.imgur.com/6Q26cQx.png",
       "prices": {
-        "S": 27.0,
-        "M": 27.0,
-        "L": 27.0,
-        "XL": 27.0,
-        "2XL": 0.0,
-        "3XL": 0.0
+        "S": 27,
+        "M": 27,
+        "L": 27,
+        "XL": 27,
+        "2XL": 0,
+        "3XL": 0
       }
     },
     {
       "id": "WDC OCP Snapback",
       "name": "Watchdog OCP Snap Back Cap",
       "description": "Watchdog Defense OCP Snap Back Cap",
-      "price": 24.0,
+      "price": 24,
       "image": "https://i.imgur.com/RfCsn1s.png",
       "prices": {
-        "OSFA": 0.0
+        "OSFA": 0
       }
     },
     {
       "id": "WDC Windbreaker",
       "name": "Watchdog Defense Windbreaker",
       "description": "Army Green Half Zip Windbreaker",
-      "price": 42.0,
+      "price": 42,
       "image": "https://i.imgur.com/PuaDsoy.png",
       "prices": {
-        "S": 42.0,
-        "M": 42.0,
-        "L": 42.0,
-        "XL": 42.0,
-        "2XL": 44.0,
-        "3XL": 48.0
+        "S": 42,
+        "M": 42,
+        "L": 42,
+        "XL": 42,
+        "2XL": 44,
+        "3XL": 48
       }
     },
     {
       "id": "26th BC OCP Snap Back Cap",
       "name": "26th BN OCP Snap Back Cap",
       "description": "26th BC OCP Snap Back Cap",
-      "price": 24.0,
+      "price": 24,
       "image": "https://i.imgur.com/VYIdGOq.png"
     },
     {
       "id": "WDC Military Green T-Shirt #6210",
       "name": "Watchdog Military Green T-shirt",
       "description": "WDC Decal On Military Green",
-      "price": 22.0,
+      "price": 22,
       "image": "https://i.imgur.com/X4ABesk.png",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "Military Green #6210",
       "name": "26th BN Army Green T-Shirt",
       "description": "Black Decal on Military Green T-Shirt",
-      "price": 22.0,
+      "price": 22,
       "image": "https://i.imgur.com/sygN7vn.jpg",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "WDC Black T-shirt #6210",
       "name": "Watchdog Black T-shirt",
       "description": "White Decal on Black",
-      "price": 22.0,
+      "price": 22,
       "image": "https://i.imgur.com/lSyIjgy.png",
       "prices": {
-        "S": 22.0,
-        "M": 22.0,
-        "L": 22.0,
-        "XL": 22.0,
-        "2XL": 24.0,
-        "3XL": 26.0
+        "S": 22,
+        "M": 22,
+        "L": 22,
+        "XL": 22,
+        "2XL": 24,
+        "3XL": 26
       }
     },
     {
       "id": "WDC Black Hoodie",
       "name": "Watchdog Black Hoodie",
       "description": "White Decal on Black",
-      "price": 32.0,
+      "price": 32,
       "image": "https://i.imgur.com/TBl8knU.png",
       "prices": {
-        "S": 32.0,
-        "M": 32.0,
-        "L": 32.0,
-        "XL": 32.0,
-        "2XL": 34.0,
-        "3XL": 36.0
+        "S": 32,
+        "M": 32,
+        "L": 32,
+        "XL": 32,
+        "2XL": 34,
+        "3XL": 36
       }
     },
     {
       "id": "WDC Crew neck ",
       "name": "Watchdog Military Green Crew neck Shirt",
       "description": "WDC Decals on Military Green",
-      "price": 29.0,
+      "price": 29,
       "image": "https://i.imgur.com/g0xEhpW.png",
       "prices": {
-        "S": 29.0,
-        "M": 29.0,
-        "L": 29.0,
-        "XL": 29.0,
-        "2XL": 31.0,
-        "3XL": 33.0
+        "S": 29,
+        "M": 29,
+        "L": 29,
+        "XL": 29,
+        "2XL": 31,
+        "3XL": 33
       }
     },
     {
       "id": "WDC Military Green Hoodie",
       "name": "Watchdog Military Green Hoodie",
       "description": "Watchdog Decals On Military Green",
-      "price": 32.0,
+      "price": 32,
       "image": "https://i.imgur.com/iGbaUEy.png",
       "prices": {
-        "S": 32.0,
-        "M": 32.0,
-        "L": 32.0,
-        "XL": 32.0,
-        "2XL": 34.0,
-        "3XL": 36.0
+        "S": 32,
+        "M": 32,
+        "L": 32,
+        "XL": 32,
+        "2XL": 34,
+        "3XL": 36
       }
     }
   ],
@@ -524,8 +524,18 @@
       "size": "S",
       "qty": 1,
       "timestamp": "2026-03-26T08:10:17.514Z"
+    },
+    {
+      "preorderNumber": 1019,
+      "state": "MI",
+      "callsign": "KRIOS TEST ORDER",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-03-26T09:00:23.029Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1018
+  "lastPreorderNumber": 1019
 }
