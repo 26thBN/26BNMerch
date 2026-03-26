@@ -75,6 +75,21 @@
         "2XL": 24.0,
         "3XL": 26.0
       }
+    },
+    {
+      "id": "WDC Multicam Fitted OCP ",
+      "name": "Watchdog Defense OCP Fitted Cap",
+      "description": "Watchdog Defense OCP Fitted Cap",
+      "price": 27.0,
+      "image": "https://i.imgur.com/6Q26cQx.png",
+      "prices": {
+        "S": 27.0,
+        "M": 27.0,
+        "L": 27.0,
+        "XL": 27.0,
+        "2XL": 0.0,
+        "3XL": 0.0
+      }
     }
   ],
   "orders": [
