@@ -182,7 +182,6 @@
   ],
   "orders": [
     {
-      
       "preorderNumber": 1020,
       "state": "MI",
       "callsign": "Tread_13 MI",
@@ -241,8 +240,28 @@
       "size": "XL",
       "qty": 2,
       "timestamp": "2026-03-26T13:21:05.007Z"
+    },
+    {
+      "preorderNumber": 1022,
+      "state": "GA",
+      "callsign": "Liberty Defender",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-03-27T16:28:33.443Z"
+    },
+    {
+      "preorderNumber": 1022,
+      "state": "GA",
+      "callsign": "Liberty Defender",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-03-27T16:28:33.444Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1021
+  "lastPreorderNumber": 1022
 }
