@@ -350,8 +350,18 @@
       "size": "2XL",
       "qty": 1,
       "timestamp": "2026-03-28T23:05:48.002Z"
+    },
+    {
+      "preorderNumber": 1024,
+      "state": "MI",
+      "callsign": "Pope / Megan",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-03-29T06:15:28.328Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1023
+  "lastPreorderNumber": 1024
 }
