@@ -360,8 +360,28 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-03-29T06:15:28.328Z"
+    },
+    {
+      "preorderNumber": 1025,
+      "state": "MI",
+      "callsign": "Pope/cady",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-03-30T18:06:11.762Z"
+    },
+    {
+      "preorderNumber": 1025,
+      "state": "MI",
+      "callsign": "Pope/cady",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-03-30T18:06:11.763Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1024
+  "lastPreorderNumber": 1025
 }
