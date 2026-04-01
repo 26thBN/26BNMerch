@@ -390,8 +390,28 @@
       "size": "L",
       "qty": 1,
       "timestamp": "2026-03-31T00:23:38.591Z"
+    },
+    {
+      "preorderNumber": 1027,
+      "state": "MI",
+      "callsign": "Pope / Nate Dogg",
+      "id": "WDC Windbreaker",
+      "item": "Watchdog Defense Windbreaker",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-01T10:19:19.795Z"
+    },
+    {
+      "preorderNumber": 1027,
+      "state": "MI",
+      "callsign": "Pope / Nate Dogg",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-01T10:19:19.796Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1026
+  "lastPreorderNumber": 1027
 }
