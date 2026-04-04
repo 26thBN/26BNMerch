@@ -410,8 +410,48 @@
       "size": "L",
       "qty": 1,
       "timestamp": "2026-04-01T10:19:19.796Z"
+    },
+    {
+      "preorderNumber": 1028,
+      "state": "MI",
+      "callsign": "Pfc.Redwolf08",
+      "id": "Black #IND4000",
+      "item": "26th BN Black Hoodie",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-04T03:12:39.924Z"
+    },
+    {
+      "preorderNumber": 1028,
+      "state": "MI",
+      "callsign": "Pfc.Redwolf08",
+      "id": "WDC Multicam Fitted OCP ",
+      "item": "Watchdog Defense OCP Fitted Cap",
+      "size": "L/XL",
+      "qty": 1,
+      "timestamp": "2026-04-04T03:12:39.925Z"
+    },
+    {
+      "preorderNumber": 1028,
+      "state": "MI",
+      "callsign": "Pfc.Redwolf08",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-04T03:12:39.925Z"
+    },
+    {
+      "preorderNumber": 1028,
+      "state": "MI",
+      "callsign": "Pfc.Redwolf08",
+      "id": "WDC Black Hoodie",
+      "item": "Watchdog Black Hoodie",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-04T03:12:39.925Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1027
+  "lastPreorderNumber": 1028
 }
