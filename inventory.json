@@ -460,8 +460,118 @@
       "size": "L",
       "qty": 1,
       "timestamp": "2026-04-06T23:34:12.915Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "WDC Black Hoodie",
+      "item": "Watchdog Black Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "26th BC OCP Snap Back Cap",
+      "item": "26th BN OCP Snap Back Cap",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "26th BN Army Green Hoodie",
+      "item": "26th BN Army Green Hoodie ",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "Black #IND4000",
+      "item": "26th BN Black Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1030,
+      "state": "MI",
+      "callsign": "PISCIS",
+      "id": "26th BN Black T shirt",
+      "item": "26th BN Black T-Shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-11T19:45:18.850Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1029
+  "lastPreorderNumber": 1030
 }
