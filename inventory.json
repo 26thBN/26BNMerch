@@ -570,8 +570,18 @@
       "size": "XL",
       "qty": 2,
       "timestamp": "2026-04-11T19:45:18.850Z"
+    },
+    {
+      "preorderNumber": 1031,
+      "state": "MI",
+      "callsign": "Pope / Tasha",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-04-12T00:36:49.259Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1030
+  "lastPreorderNumber": 1031
 }
