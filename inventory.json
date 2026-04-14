@@ -580,8 +580,18 @@
       "size": "S",
       "qty": 1,
       "timestamp": "2026-04-12T00:36:49.259Z"
+    },
+    {
+      "preorderNumber": 1032,
+      "state": "MI",
+      "callsign": "Pope / Hannah",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-14T01:19:34.500Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1031
+  "lastPreorderNumber": 1032
 }
