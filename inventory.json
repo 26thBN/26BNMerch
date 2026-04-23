@@ -640,8 +640,38 @@
       "size": "2XL",
       "qty": 1,
       "timestamp": "2026-04-23T01:22:59.325Z"
+    },
+    {
+      "preorderNumber": 1036,
+      "state": "WI",
+      "callsign": "Homesteader",
+      "id": "WDC OCP Snapback",
+      "item": "Watchdog OCP Snap Back Cap",
+      "size": "OSFA",
+      "qty": 1,
+      "timestamp": "2026-04-23T10:02:06.844Z"
+    },
+    {
+      "preorderNumber": 1036,
+      "state": "WI",
+      "callsign": "Homesteader",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-23T10:02:06.844Z"
+    },
+    {
+      "preorderNumber": 1036,
+      "state": "WI",
+      "callsign": "Homesteader",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-23T10:02:06.844Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1035
+  "lastPreorderNumber": 1036
 }
