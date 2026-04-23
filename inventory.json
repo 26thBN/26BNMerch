@@ -590,8 +590,38 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-14T01:19:34.500Z"
+    },
+    {
+      "preorderNumber": 1033,
+      "state": "WI",
+      "callsign": "Ballistichuman",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-23T00:08:50.691Z"
+    },
+    {
+      "preorderNumber": 1033,
+      "state": "WI",
+      "callsign": "Ballistichuman",
+      "id": "WDC Multicam Fitted OCP ",
+      "item": "Watchdog Defense OCP Fitted Cap",
+      "size": "L/XL",
+      "qty": 1,
+      "timestamp": "2026-04-23T00:08:50.692Z"
+    },
+    {
+      "preorderNumber": 1033,
+      "state": "WI",
+      "callsign": "Ballistichuman",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-23T00:08:50.692Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1032
+  "lastPreorderNumber": 1033
 }
