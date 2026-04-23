@@ -620,8 +620,18 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-23T00:08:50.692Z"
+    },
+    {
+      "preorderNumber": 1034,
+      "state": "GA",
+      "callsign": "Kiotay",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-23T01:20:46.234Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1033
+  "lastPreorderNumber": 1034
 }
