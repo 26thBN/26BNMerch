@@ -670,8 +670,48 @@
       "size": "XL",
       "qty": 2,
       "timestamp": "2026-04-23T10:02:06.844Z"
+    },
+    {
+      "preorderNumber": 1037,
+      "state": "IL",
+      "callsign": "ParrottMPIL",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-23T21:02:26.811Z"
+    },
+    {
+      "preorderNumber": 1037,
+      "state": "IL",
+      "callsign": "ParrottMPIL",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-23T21:02:26.812Z"
+    },
+    {
+      "preorderNumber": 1037,
+      "state": "IL",
+      "callsign": "ParrottMPIL",
+      "id": "WDC Black Hoodie",
+      "item": "Watchdog Black Hoodie",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-23T21:02:26.812Z"
+    },
+    {
+      "preorderNumber": 1037,
+      "state": "IL",
+      "callsign": "ParrottMPIL",
+      "id": "WDC Crew neck ",
+      "item": "Watchdog Military Green Crew neck Shirt",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-23T21:02:26.812Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1036
+  "lastPreorderNumber": 1037
 }
