@@ -780,8 +780,58 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-23T21:15:33.844Z"
+    },
+    {
+      "preorderNumber": 1039,
+      "state": "GA",
+      "callsign": "Pale Horse",
+      "id": "WDC OCP Snapback",
+      "item": "Watchdog OCP Snap Back Cap",
+      "size": "OSFA",
+      "qty": 5,
+      "timestamp": "2026-04-23T23:52:12.812Z"
+    },
+    {
+      "preorderNumber": 1039,
+      "state": "GA",
+      "callsign": "Pale Horse",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-23T23:52:12.813Z"
+    },
+    {
+      "preorderNumber": 1039,
+      "state": "GA",
+      "callsign": "Pale Horse",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-23T23:52:12.813Z"
+    },
+    {
+      "preorderNumber": 1039,
+      "state": "GA",
+      "callsign": "Pale Horse",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-23T23:52:12.813Z"
+    },
+    {
+      "preorderNumber": 1039,
+      "state": "GA",
+      "callsign": "Pale Horse",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "S",
+      "qty": 1,
+      "timestamp": "2026-04-23T23:52:12.813Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1038
+  "lastPreorderNumber": 1039
 }
