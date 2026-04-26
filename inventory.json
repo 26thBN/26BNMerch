@@ -23,12 +23,12 @@
       "price": 32,
       "image": "https://i.imgur.com/XCTHxj9.png",
       "prices": {
-        "S": 22,
-        "M": 22,
-        "L": 22,
-        "XL": 22,
-        "2XL": 24,
-        "3XL": 26
+        "S": 32,
+        "M": 32,
+        "L": 32,
+        "XL": 32,
+        "2XL": 34,
+        "3XL": 36
       }
     },
     {
@@ -38,12 +38,12 @@
       "price": 32,
       "image": "https://i.imgur.com/d27LTTy.png",
       "prices": {
-        "S": 22,
-        "M": 22,
-        "L": 22,
-        "XL": 22,
-        "2XL": 24,
-        "3XL": 26
+        "S": 32,
+        "M": 32,
+        "L": 32,
+        "XL": 32,
+        "2XL": 34,
+        "3XL": 36
       }
     },
     {
