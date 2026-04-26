@@ -910,8 +910,28 @@
       "size": "OSFA",
       "qty": 1,
       "timestamp": "2026-04-26T18:36:36.166Z"
+    },
+    {
+      "preorderNumber": 1043,
+      "state": "SC",
+      "callsign": "Shakai",
+      "id": "WDC Black Hoodie",
+      "item": "Watchdog Black Hoodie",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-04-26T18:42:10.146Z"
+    },
+    {
+      "preorderNumber": 1043,
+      "state": "SC",
+      "callsign": "Shakai",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-26T18:42:10.147Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1042
+  "lastPreorderNumber": 1043
 }
