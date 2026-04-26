@@ -870,8 +870,38 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-26T13:05:40.112Z"
+    },
+    {
+      "preorderNumber": 1041,
+      "state": "WI",
+      "callsign": "Cap Ghost Medic WI CO",
+      "id": "WDC OCP Snapback",
+      "item": "Watchdog OCP Snap Back Cap",
+      "size": "OSFA",
+      "qty": 1,
+      "timestamp": "2026-04-26T18:31:00.977Z"
+    },
+    {
+      "preorderNumber": 1041,
+      "state": "WI",
+      "callsign": "Cap Ghost Medic WI CO",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-26T18:31:00.978Z"
+    },
+    {
+      "preorderNumber": 1041,
+      "state": "WI",
+      "callsign": "Cap Ghost Medic WI CO",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 2,
+      "timestamp": "2026-04-26T18:31:00.978Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1040
+  "lastPreorderNumber": 1041
 }
