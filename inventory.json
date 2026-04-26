@@ -900,8 +900,18 @@
       "size": "XL",
       "qty": 2,
       "timestamp": "2026-04-26T18:31:00.978Z"
+    },
+    {
+      "preorderNumber": 1042,
+      "state": "WI",
+      "callsign": "Cap Ghost Medic WI CO",
+      "id": "WDC OCP Snapback",
+      "item": "Watchdog OCP Snap Back Cap",
+      "size": "OSFA",
+      "qty": 1,
+      "timestamp": "2026-04-26T18:36:36.166Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1041
+  "lastPreorderNumber": 1042
 }
