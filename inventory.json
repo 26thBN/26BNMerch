@@ -930,8 +930,68 @@
       "size": "XL",
       "qty": 2,
       "timestamp": "2026-04-26T18:42:10.147Z"
+    },
+    {
+      "preorderNumber": 1044,
+      "state": "MI",
+      "callsign": "PFC ROSE",
+      "id": "26th BN Black T shirt",
+      "item": "26th BN Black T-Shirt",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-27T20:45:52.266Z"
+    },
+    {
+      "preorderNumber": 1044,
+      "state": "MI",
+      "callsign": "PFC ROSE",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-27T20:45:52.266Z"
+    },
+    {
+      "preorderNumber": 1044,
+      "state": "MI",
+      "callsign": "PFC ROSE",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-27T20:45:52.266Z"
+    },
+    {
+      "preorderNumber": 1044,
+      "state": "MI",
+      "callsign": "PFC ROSE",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-27T20:45:52.266Z"
+    },
+    {
+      "preorderNumber": 1044,
+      "state": "MI",
+      "callsign": "PFC ROSE",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-27T20:45:52.266Z"
+    },
+    {
+      "preorderNumber": 1044,
+      "state": "MI",
+      "callsign": "PFC ROSE",
+      "id": "26th BN Army Green Hoodie",
+      "item": "26th BN Army Green Hoodie ",
+      "size": "M",
+      "qty": 1,
+      "timestamp": "2026-04-27T20:45:52.266Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1043
+  "lastPreorderNumber": 1044
 }
