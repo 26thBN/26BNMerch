@@ -1130,8 +1130,18 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-28T01:05:22.755Z"
+    },
+    {
+      "preorderNumber": 1049,
+      "state": "MI",
+      "callsign": "Pope / Veronica",
+      "id": "WDC Windbreaker",
+      "item": "Watchdog Defense Windbreaker",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-28T02:59:15.999Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1048
+  "lastPreorderNumber": 1049
 }
