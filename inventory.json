@@ -1230,8 +1230,68 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-30T10:54:00.510Z"
+    },
+    {
+      "preorderNumber": 1054,
+      "state": "MI",
+      "callsign": "WHITE-BEARD",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T11:55:52.999Z"
+    },
+    {
+      "preorderNumber": 1054,
+      "state": "MI",
+      "callsign": "WHITE-BEARD",
+      "id": "26th BN Army Green Hoodie",
+      "item": "26th BN Army Green Hoodie ",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T11:55:53.000Z"
+    },
+    {
+      "preorderNumber": 1054,
+      "state": "MI",
+      "callsign": "WHITE-BEARD",
+      "id": "WDC Crew neck ",
+      "item": "Watchdog Military Green Crew neck Shirt",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T11:55:53.000Z"
+    },
+    {
+      "preorderNumber": 1054,
+      "state": "MI",
+      "callsign": "WHITE-BEARD",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "L",
+      "qty": 2,
+      "timestamp": "2026-04-30T11:55:53.000Z"
+    },
+    {
+      "preorderNumber": 1054,
+      "state": "MI",
+      "callsign": "WHITE-BEARD",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "2XL",
+      "qty": 2,
+      "timestamp": "2026-04-30T11:55:53.000Z"
+    },
+    {
+      "preorderNumber": 1054,
+      "state": "MI",
+      "callsign": "WHITE-BEARD",
+      "id": "WDC Windbreaker",
+      "item": "Watchdog Defense Windbreaker",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T11:55:53.000Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1053
+  "lastPreorderNumber": 1054
 }
