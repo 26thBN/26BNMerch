@@ -1140,8 +1140,28 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-28T02:59:15.999Z"
+    },
+    {
+      "preorderNumber": 1050,
+      "state": "WI",
+      "callsign": "PVT EagleHeart1776 WI",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T00:00:23.463Z"
+    },
+    {
+      "preorderNumber": 1050,
+      "state": "WI",
+      "callsign": "PVT EagleHeart1776 WI",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T00:00:23.463Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1049
+  "lastPreorderNumber": 1050
 }
