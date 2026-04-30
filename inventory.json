@@ -1160,8 +1160,18 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-04-30T00:00:23.463Z"
+    },
+    {
+      "preorderNumber": 1051,
+      "state": "MI",
+      "callsign": "Pope / Dale",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T02:40:21.166Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1050
+  "lastPreorderNumber": 1051
 }
