@@ -1290,8 +1290,38 @@
       "size": "2XL",
       "qty": 1,
       "timestamp": "2026-04-30T11:55:53.000Z"
+    },
+    {
+      "preorderNumber": 1055,
+      "state": "MI",
+      "callsign": "Myles",
+      "id": "26th BN Black T shirt",
+      "item": "26th BN Black T-Shirt",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T12:11:42.129Z"
+    },
+    {
+      "preorderNumber": 1055,
+      "state": "MI",
+      "callsign": "Myles",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T12:11:42.134Z"
+    },
+    {
+      "preorderNumber": 1055,
+      "state": "MI",
+      "callsign": "Myles",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T12:11:42.134Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1054
+  "lastPreorderNumber": 1055
 }
