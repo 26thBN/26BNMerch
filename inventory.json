@@ -1170,8 +1170,48 @@
       "size": "2XL",
       "qty": 1,
       "timestamp": "2026-04-30T02:40:21.166Z"
+    },
+    {
+      "preorderNumber": 1052,
+      "state": "MI",
+      "callsign": "PFC_Hot_pocket",
+      "id": "26th BC OCP Snap Back Cap",
+      "item": "26th BN OCP Snap Back Cap",
+      "size": null,
+      "qty": 1,
+      "timestamp": "2026-04-30T02:54:01.803Z"
+    },
+    {
+      "preorderNumber": 1052,
+      "state": "MI",
+      "callsign": "PFC_Hot_pocket",
+      "id": "WDC Crew neck ",
+      "item": "Watchdog Military Green Crew neck Shirt",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T02:54:01.807Z"
+    },
+    {
+      "preorderNumber": 1052,
+      "state": "MI",
+      "callsign": "PFC_Hot_pocket",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "2XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T02:54:01.807Z"
+    },
+    {
+      "preorderNumber": 1052,
+      "state": "MI",
+      "callsign": "PFC_Hot_pocket",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T02:54:01.807Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1051
+  "lastPreorderNumber": 1052
 }
