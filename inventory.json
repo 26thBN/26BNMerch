@@ -1210,8 +1210,28 @@
       "size": "3XL",
       "qty": 1,
       "timestamp": "2026-04-30T02:54:01.807Z"
+    },
+    {
+      "preorderNumber": 1053,
+      "state": "MI",
+      "callsign": "Pope / Rodger",
+      "id": "WDC Black T-shirt #6210",
+      "item": "Watchdog Black T-shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T10:54:00.507Z"
+    },
+    {
+      "preorderNumber": 1053,
+      "state": "MI",
+      "callsign": "Pope / Rodger",
+      "id": "WDC Black Hoodie",
+      "item": "Watchdog Black Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-04-30T10:54:00.510Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1052
+  "lastPreorderNumber": 1053
 }
