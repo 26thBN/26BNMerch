@@ -1380,8 +1380,58 @@
       "size": "L",
       "qty": 1,
       "timestamp": "2026-05-01T00:09:31.453Z"
+    },
+    {
+      "preorderNumber": 1059,
+      "state": "MI",
+      "callsign": "Lil_gidget",
+      "id": "Military Green #6210",
+      "item": "26th BN Army Green T-Shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-05-01T00:14:48.109Z"
+    },
+    {
+      "preorderNumber": 1059,
+      "state": "MI",
+      "callsign": "Lil_gidget",
+      "id": "Black #IND4000",
+      "item": "26th BN Black Hoodie",
+      "size": "L",
+      "qty": 1,
+      "timestamp": "2026-05-01T00:14:48.109Z"
+    },
+    {
+      "preorderNumber": 1059,
+      "state": "MI",
+      "callsign": "Lil_gidget",
+      "id": "Black #IND4000",
+      "item": "26th BN Black Hoodie",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-05-01T00:14:48.109Z"
+    },
+    {
+      "preorderNumber": 1059,
+      "state": "MI",
+      "callsign": "Lil_gidget",
+      "id": "26th BN Black T shirt",
+      "item": "26th BN Black T-Shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-05-01T00:14:48.109Z"
+    },
+    {
+      "preorderNumber": 1059,
+      "state": "MI",
+      "callsign": "Lil_gidget",
+      "id": "WDC Crew neck ",
+      "item": "Watchdog Military Green Crew neck Shirt",
+      "size": "XL",
+      "qty": 1,
+      "timestamp": "2026-05-01T00:14:48.109Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1058
+  "lastPreorderNumber": 1059
 }
