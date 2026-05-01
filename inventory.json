@@ -1430,8 +1430,38 @@
       "size": "XL",
       "qty": 1,
       "timestamp": "2026-05-01T00:14:48.109Z"
+    },
+    {
+      "preorderNumber": 1060,
+      "state": "SC",
+      "callsign": "Midnight Marauder",
+      "id": "WDC OCP Snapback",
+      "item": "Watchdog OCP Snap Back Cap",
+      "size": "OSFA",
+      "qty": 1,
+      "timestamp": "2026-05-01T01:13:29.149Z"
+    },
+    {
+      "preorderNumber": 1060,
+      "state": "SC",
+      "callsign": "Midnight Marauder",
+      "id": "WDC Military Green T-Shirt #6210",
+      "item": "Watchdog Military Green T-shirt",
+      "size": "3XL",
+      "qty": 2,
+      "timestamp": "2026-05-01T01:13:29.149Z"
+    },
+    {
+      "preorderNumber": 1060,
+      "state": "SC",
+      "callsign": "Midnight Marauder",
+      "id": "WDC Military Green Hoodie",
+      "item": "Watchdog Military Green Hoodie",
+      "size": "3XL",
+      "qty": 1,
+      "timestamp": "2026-05-01T01:13:29.149Z"
     }
   ],
   "lastOrderNumber": 1028,
-  "lastPreorderNumber": 1059
+  "lastPreorderNumber": 1060
 }
